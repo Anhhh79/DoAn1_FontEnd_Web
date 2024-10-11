@@ -75,24 +75,29 @@
                         <div>
                             <h5 class="pt-2 textTitleRoom">Thông tin người đặt phòng</h5>
                             <hr class="m-2">
-                            <div class="row mb-3">
+                            <div class="row mt-3">
                                 <div class="col">
                                     <label for="fullName" class="form-label">Họ Và Tên</label>
                                     <input type="text" id="fullName" class="form-control" placeholder="Full name"
                                         aria-label="Full name" required>
                                 </div>
+                                <div class="col mb-3">
+                                    <label for="Country" class="form-label">Giới Tính</label>
+                                    <select class="form-select" id="Country" aria-label="Default select example">
+                                        <option value="1">Nam</option>
+                                        <option value="2">Nữ</option>
+                                        <option value="3">Khác</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
                                 <div class="col">
                                     <label for="cccd" class="form-label">Số Căn Cước Công Dân</label>
                                     <input type="text" id="cccd" class="form-control" placeholder="ID number"
                                         aria-label="cccd" required>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class=" col mb-3">
-                                    <label for="EmailAddress" class="form-label">Địa Chỉ Email</label>
-                                    <input type="email" class="form-control" id="EmailAddress"
-                                        aria-describedby="emailHelp" placeholder="...@gmail.com" required>
-                                </div>
+                                
                                 <div class="col mb-3">
                                     <label for="PhoneNumber" class="form-label">Số Điện Thoại</label>
                                     <input type="tel" class="form-control" id="PhoneNumber"
@@ -107,13 +112,10 @@
                                         aria-describedby="phoneNumber1" placeholder="Phone Number" pattern="[0-9]{10}"
                                         title="Số điện thoại gồm 10 chữ số" required>
                                 </div>
-                                <div class="col mb-3">
-                                    <label for="Country" class="form-label">Quốc Gia</label>
-                                    <select class="form-select" id="Country" aria-label="Default select example">
-                                        <option value="1">Việt Nam</option>
-                                        <option value="2">England</option>
-                                        <option value="3">America</option>
-                                    </select>
+                                <div class=" col mb-3">
+                                    <label for="EmailAddress" class="form-label">Địa Chỉ Email</label>
+                                    <input type="email" class="form-control" id="EmailAddress"
+                                        aria-describedby="emailHelp" placeholder="...@gmail.com" required>
                                 </div>
                             </div>
                             <div class="box box-content">
@@ -145,8 +147,7 @@
                         </div>
                     </div>
                     <!-- Thong tin dat phong -->
-                    <div class="rounded"
-                        style="width: 500px; height: 700px; margin-left: 10px; background: white;">
+                    <div class="col-4 rounded" style="width: 500px; height: 692px; margin-left: 20px; background: white;">
                         <div class="container p-3">
                             <div class="textTitleRoom">
                                 <h5>Thông tin đặt phòng</h5>
@@ -154,13 +155,6 @@
                             </div>
                             <div class="pt-1 mb-2">
                                 <div class="textTitleRoom text-center"><b>Khách Sạn 3TL</b></div>
-                                <div class="pt-2 textTitleRoom d-flex align-items-center"
-                                    style="justify-content: space-between;">
-                                    <div>Nhận Phòng: <span style="font-weight: 400;"> 15-09-2024
-                                        </span> </div>
-                                    <div class="my-3">Trả Phòng: <span style="font-weight: 400;"> 15-09-2024 </span>
-                                    </div>
-                                </div>
                             </div>
                             <div>
                                 <h6> Thông tin phòng</h4>
@@ -170,6 +164,16 @@
                                             <div class="d-flex align-items-center">
                                                 <h6 class="d-flex me-2 mb-0">Hạng phòng:</h6><span> Superior Twin</span>
                                             </div>
+                                            <div class="d-flex mt-2">
+                                                <div class="d-flex">
+                                                    <h6 class="mb-0 mt-1">Ngày nhận: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
+                                                <div class="d-flex" style="margin-left: 50px;">
+                                                    <h6 class="mb-0 mt-1">Ngày trả: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
+                                            </div>
                                             <div class="d-flex align-items-center mt-1">
                                                 <h6 class="d-flex me-2 mb-0">Số lượng:</h6><span> 3</span>
                                             </div>
@@ -179,21 +183,9 @@
                                                     <span class="text-color textTitleRoom"> 1,800,00 VND/
                                                         đêm</span>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="mt-3 mx-2 Datphong-hover">
-                                            <div class="d-flex align-items-center">
-                                                <h6 class="d-flex me-2 mb-0">Hạng phòng:</h6><span> Deluxe King</span>
-                                            </div>
-                                            <div class="d-flex align-items-center mt-1">
-                                                <h6 class="d-flex me-2 mb-0">Số lượng:</h6><span> 3</span>
-                                            </div>
-                                            <div class="d-flex align-items-center mt-1">
-                                                <div class="col-6">
-                                                    <h6 class=" me-2 mb-0" style="display: inline;">Giá:</h6>
-                                                    <span class="text-color textTitleRoom"> 2,800,00 VND/
-                                                        đêm</span>
+                                                <div class="d-flex mt-1 justify-content-end col-6">
+                                                    <button type="button" class="btn btn-danger"
+                                                        style="font-size: smaller;">Hủy</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,6 +194,16 @@
                                             <div class="d-flex align-items-center">
                                                 <h6 class="d-flex me-2 mb-0">Hạng phòng:</h6><span> Superior Twin</span>
                                             </div>
+                                            <div class="d-flex mt-2">
+                                                <div class="d-flex">
+                                                    <h6 class="mb-0 mt-1">Ngày nhận: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
+                                                <div class="d-flex" style="margin-left: 50px;">
+                                                    <h6 class="mb-0 mt-1">Ngày trả: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
+                                            </div>
                                             <div class="d-flex align-items-center mt-1">
                                                 <h6 class="d-flex me-2 mb-0">Số lượng:</h6><span> 3</span>
                                             </div>
@@ -211,12 +213,26 @@
                                                     <span class="text-color textTitleRoom"> 1,800,00 VND/
                                                         đêm</span>
                                                 </div>
+                                                <div class="d-flex mt-1 justify-content-end col-6">
+                                                    <button type="button" class="btn btn-danger"
+                                                        style="font-size: smaller;">Hủy</button>
+                                                </div>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="mt-3 mx-2 Datphong-hover">
                                             <div class="d-flex align-items-center">
-                                                <h6 class="d-flex me-2 mb-0">Hạng phòng:</h6><span> Deluxe King</span>
+                                                <h6 class="d-flex me-2 mb-0">Hạng phòng:</h6><span> Superior Twin</span>
+                                            </div>
+                                            <div class="d-flex mt-2">
+                                                <div class="d-flex">
+                                                    <h6 class="mb-0 mt-1">Ngày nhận: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
+                                                <div class="d-flex" style="margin-left: 50px;">
+                                                    <h6 class="mb-0 mt-1">Ngày trả: </h6>
+                                                    <div class="ms-1">20/09/2024</div>
+                                                </div>
                                             </div>
                                             <div class="d-flex align-items-center mt-1">
                                                 <h6 class="d-flex me-2 mb-0">Số lượng:</h6><span> 3</span>
@@ -224,17 +240,21 @@
                                             <div class="d-flex align-items-center mt-1">
                                                 <div class="col-6">
                                                     <h6 class=" me-2 mb-0" style="display: inline;">Giá:</h6>
-                                                    <span class="text-color textTitleRoom"> 2,800,00 VND/
+                                                    <span class="text-color textTitleRoom"> 1,800,00 VND/
                                                         đêm</span>
+                                                </div>
+                                                <div class="d-flex mt-1 justify-content-end col-6">
+                                                    <button type="button" class="btn btn-danger"
+                                                        style="font-size: smaller;">Hủy</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
+    
                             </div>
                             <hr>
-                            <div style="margin-top: 35px;">
-                                <div class="d-flex">
+                            <div>
+                                <div class="d-flex mt-5">
                                     <div class="col-6">
                                         <div>
                                             <h5>Tổng cộng: </h5>
@@ -245,6 +265,11 @@
                                             <h5 class="text-color">15,600,00 VND
                                         </div>
                                     </div>
+                                </div>
+                                <div class="mt-2 text-center pt-2">
+                                    <a href="ThanhToan.html" type="button" class="btn bg-color"
+                                        style="font-size:medium ; font-weight: 600; color: white; width: 100%; height: 38px;">Đặt
+                                        Ngay</a>
                                 </div>
                             </div>
                         </div>

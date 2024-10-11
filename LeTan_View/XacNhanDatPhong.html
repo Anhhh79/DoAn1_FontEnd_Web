@@ -3,7 +3,7 @@
         <div class="navbar-collapse collapse">
             <ul class="navbar-nav justify-content-between" style="width: 1380px;">
                 <li>
-                    <h2 style="font-weight: bolder;">Thông tin nhân viên</h2>
+                    <h2 style="font-weight: bolder;">Yêu cầu đặt phòng</h2>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
@@ -24,92 +24,8 @@
                     <div class="input-group d-flex align-items-center border border-dark rounded"
                         style="width: 300px;padding: 0;">
                         <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
-                        <input type="text" class="form-control input-border" placeholder="Thông tin nhân viên"
+                        <input type="text" class="form-control input-border" placeholder="Thông tin đặt phòng"
                             aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
-                    </div>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
-                        data-bs-dismiss="modal" style="width: 135px; font-size: small;">Thêm nhân
-                        viên</button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="border-radius: 20px;">
-                                <div class="modal-header d-flex justify-content-center">
-                                    <div>
-                                        <h5 style="font-weight: bolder;">Thêm nhân viên</h5>
-                                    </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                            <div class="col-6">
-                                                <label class="mb-1 ms-1 label-modal">Giới tính</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Nam</option>
-                                                    <option value="1">Nữ</option>
-                                                    <option value="2">Khác</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Căn cước công dân</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Số điện thoại</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-6">
-                                                <label class="mb-1 ms-1 label-modal">Chức vụ </label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Quản lý </option>
-                                                    <option value="1">Bảo vệ</option>
-                                                    <option value="2">Lễ tân</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Địa chỉ</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-6">
-                                                <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                <input type="file" id="imageInput" accept="image/*">
-                                            </div>
-                                            <div class="col-6">
-                                                <img id="imagePreview" src="" alt="Xem trước ảnh"
-                                                    style="max-width: 55px; display: none;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- footer -->
-                                <div class="container my-2">
-                                    <div class="row" style="justify-content: flex-end;">
-                                        <div class="col-3 m-2 d-flex justify-content-end">
-                                            <button type="button" class="btn btn-success" style="font-size: small;">Thêm
-                                                nhân viên</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -119,88 +35,119 @@
                             <thead style="background: #0e2238;">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Mã nhân viên</th>
-                                    <th scope="col">Họ và tên</th>
-                                    <th scope="col">Giới tính</th>
-                                    <th scope="col">Số điện thoại</th>
-                                    <th scope="col">Chức vụ</th>
-                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">Mã đặt phòng</th>
+                                    <th scope="col">Tên khách hàng</th>
+                                    <th scope="col">Số điện thoại </th>
+                                    <th scope="col">Hạng Phòng</th>
+                                    <th scope="col">Thời gian đặt phòng</th>
+                                    <th scope="col">Tổng thanh toán</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td class="me-2">QL00001</td>
-                                    <td>Huỳnh Quốc Bảo</td>
-                                    <td>Nam</td>
-                                    <td>090013332</td>
-                                    <td>Quản lý</td>
-                                    <td>Cần Thơ</td>
-                                    <td class="d-flex  justify-content-end">
-                                        <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
-                                            style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
-                                            tiết</a>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
+                                    <td class="me-2">MDP0001</td>
+                                    <td>Nguyễn Bảo Anh</td>
+                                    <td>012345678</td>
+                                    <td>Phòng VIP</td>
+                                    <td>12h30 - 7/9/2024</td>
+                                    <td>900.000 <span>VND</span></td>
+                                    <td class="d-flex  justify-content-center">
+                                        <a class="btn btn-success" style="font-size: small;" data-bs-toggle="modal"
+                                            data-bs-target="#XacNhan1" data-bs-dismiss="modal">Xác Nhận</a>
+                                        <!-- modal -->
+                                        <div class="modal fade" id="XacNhan1" tabindex="-1" aria-labelledby="chitiet"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
+                                                <div class="modal-content" style="border-radius: 20px">
                                                     <div class="modal-header d-flex justify-content-center">
                                                         <div>
-                                                            <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
+                                                            <h5 style="font-weight: bolder;">Thông tin đặt phòng </h5>
                                                         </div>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">
+                                                    <div class="modal-body pb-0">
                                                         <div class="container">
                                                             <div class="row">
-                                                                <div class="col-2">
-                                                                    <img src="images/team-4.jpg" alt=""
-                                                                        style="width: 130px;">
-                                                                    <h5 class="text-center mt-2 ms-2"
-                                                                        style="font-weight: 600;">Quản Lý</h5>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="container ms-3">
-                                                                        <div class="row">
-                                                                            <h4 style="font-weight: 600;">Huỳnh Quốc Bảo
-                                                                            </h4>
-                                                                        </div>
+                                                                <div class="col-12 px-0">
+                                                                    <div class="container">
                                                                         <div class="row mt-2">
-                                                                            <div class="col-8">
-                                                                                <h6> <span style="font-weight: 600;">Căn
-                                                                                        cước công dân:</span>
-                                                                                    09977364764</h6>
+                                                                            <div class="col-4">
+                                                                                <h6> <span style="font-weight: 600;">Họ
+                                                                                        tên: </span>Nguyễn Văn Nhật</h6>
                                                                             </div>
                                                                             <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Giới
-                                                                                        Tính:</span> Nam</h6>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-8">
                                                                                 <h6><span style="font-weight: 600;">Số
-                                                                                        điện thoại:</span> 0977476400
+                                                                                        điện thoại:</span> 012345678
                                                                                 </h6>
                                                                             </div>
                                                                             <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Địa
-                                                                                        Chỉ:</span> Cần Thơ</h6>
+                                                                                <h6> <span
+                                                                                        style="font-weight: 600;">Giới
+                                                                                        tính: </span>Nam</h6>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row mt-2">
-                                                                            <div class="col-7">
+                                                                            <div class="col-4">
                                                                                 <h6><span
-                                                                                        style="font-weight: 600;">Lương
-                                                                                        cơ bản:</span> 15.000.000 VND
+                                                                                        style="font-weight: 600;">CCCD:</span>
+                                                                                    091275632831</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Ngày
+                                                                                        nhận: </span>25/09/2024</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Ngày
+                                                                                        Trả:</span> 27/09/2024</h6>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-2">
+                                                                            <div class="col-4">
+                                                                                <h6> <span
+                                                                                        style="font-weight: 600;">Email:
+                                                                                    </span> nhat029@gmail.com</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Tổng
+                                                                                        số ngày: </span> 2 </h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Hạng
+                                                                                        phòng: </span> VIP </h6>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="row mt-2">
+                                                                            <div class="col-4 ">
+                                                                                <h6><span style="font-weight: 600;">
+                                                                                        Yêu cầu: </span>Sạch sẽ
                                                                                 </h6>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-5 d-flex pe-2  justify-content-end">
-                                                                                <h6><span style="font-weight: 600;">Mã
-                                                                                        Nhân Viên:</span> QL00001</h6>
+
+                                                                            <div class="col-4 form-group"
+                                                                                style="display: flex;">
+                                                                                <!-- Chỉnh lại label không sử dụng <h6> -->
+                                                                                <label for="select-gender"
+                                                                                    style="font-weight: 600; margin-right: 10px;">Tên
+                                                                                    Phòng:</label>
+
+                                                                                <!-- Hộp chọn select -->
+                                                                                <select id="select-gender"
+                                                                                    class="form-select"
+                                                                                    aria-label="Default select example"
+                                                                                    style="font-weight: 400; width: 100px; height: 35px;">
+                                                                                    <option selected>PL01</option>
+                                                                                    <option value="1">PL02</option>
+                                                                                    <option value="2">PL03</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-4 ">
+                                                                                <h6><span style="font-weight: 600;">
+                                                                                        Thanh toán: </span> 900000 VND
+                                                                                </h6>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -208,187 +155,118 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal"
-                                            data-bs-target="#sua" data-bs-dismiss="modal"
-                                            style="font-size: small;">Sửa</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="sua" tabindex="-1" aria-labelledby="sua"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
-                                                    <div class="modal-header d-flex justify-content-center">
-                                                        <div>
-                                                            <h5 style="font-weight: bolder;">Sửa thông tin nhân viên
-                                                            </h5>
-                                                        </div>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Họ và
-                                                                        Tên</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Huỳnh Quốc Bảo"
-                                                                        aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Giới
-                                                                        tính</label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Nam</option>
-                                                                        <option value="1">Nữ</option>
-                                                                        <option value="2">Khác</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Căn cước
-                                                                        công dân</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="099292929" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Số điện
-                                                                        thoại</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="077362782" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Chức vụ
-                                                                    </label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Quản lý </option>
-                                                                        <option value="1">Bảo vệ</option>
-                                                                        <option value="2">Lễ tân</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Địa
-                                                                        chỉ</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Cần Thơ" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                                    <input type="file" id="imageInput" accept="image/*">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- footer -->
-                                                    <div class="container my-2">
-                                                        <div class="row" style="justify-content: flex-end;">
-                                                            <div class="col-3 m-2 d-flex justify-content-end">
-                                                                <button type="button" class="btn btn-success"
-                                                                    style="font-size: small;">Đồng ý</button>
-                                                            </div>
-                                                        </div>
+                                                    <div class="container my-2 d-flex justify-content-end">
+                                                        <button type="button" class="btn btn-success">Hoàn tất</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-danger"
-                                            style="font-size: small;">Xóa</button>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td class="me-2">QL00001</td>
-                                    <td>Huỳnh Quốc Bảo</td>
-                                    <td>Nam</td>
-                                    <td>090013332</td>
-                                    <td>Quản lý</td>
-                                    <td>Cần Thơ</td>
-                                    <td class="d-flex  justify-content-end">
-                                        <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
-                                            style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
-                                            tiết</a>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
+                                    <td class="me-2">MDP0001</td>
+                                    <td>Nguyễn Bảo Anh</td>
+                                    <td>012345678</td>
+                                    <td>Phòng VIP</td>
+                                    <td>12h30 - 7/9/2024</td>
+                                    <td>900.000 <span>VND</span></td>
+                                    <td class="d-flex  justify-content-center">
+                                        <a class="btn btn-success" style="font-size: small;" data-bs-toggle="modal"
+                                            data-bs-target="#XacNhan1" data-bs-dismiss="modal">Xác Nhận</a>
+                                        <!-- modal -->
+                                        <div class="modal fade" id="XacNhan1" tabindex="-1" aria-labelledby="chitiet"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
+                                                <div class="modal-content" style="border-radius: 20px">
                                                     <div class="modal-header d-flex justify-content-center">
                                                         <div>
-                                                            <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
+                                                            <h5 style="font-weight: bolder;">Thông tin đặt phòng </h5>
                                                         </div>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
-                                                    <div class="modal-body">
+                                                    <div class="modal-body pb-0">
                                                         <div class="container">
                                                             <div class="row">
-                                                                <div class="col-2">
-                                                                    <img src="images/team-4.jpg" alt=""
-                                                                        style="width: 130px;">
-                                                                    <h5 class="text-center mt-2 ms-2"
-                                                                        style="font-weight: 600;">Quản Lý</h5>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="container ms-3">
-                                                                        <div class="row">
-                                                                            <h4 style="font-weight: 600;">Huỳnh Quốc Bảo
-                                                                            </h4>
-                                                                        </div>
+                                                                <div class="col-12 px-0">
+                                                                    <div class="container">
                                                                         <div class="row mt-2">
-                                                                            <div class="col-8">
-                                                                                <h6> <span style="font-weight: 600;">Căn
-                                                                                        cước công dân:</span>
-                                                                                    09977364764</h6>
+                                                                            <div class="col-4">
+                                                                                <h6> <span style="font-weight: 600;">Họ
+                                                                                        tên: </span>Nguyễn Văn Nhật</h6>
                                                                             </div>
                                                                             <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Giới
-                                                                                        Tính:</span> Nam</h6>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-8">
                                                                                 <h6><span style="font-weight: 600;">Số
-                                                                                        điện thoại:</span> 0977476400
+                                                                                        điện thoại:</span> 012345678
                                                                                 </h6>
                                                                             </div>
                                                                             <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Địa
-                                                                                        Chỉ:</span> Cần Thơ</h6>
+                                                                                <h6> <span
+                                                                                        style="font-weight: 600;">Giới
+                                                                                        tính: </span>Nam</h6>
                                                                             </div>
                                                                         </div>
                                                                         <div class="row mt-2">
-                                                                            <div class="col-7">
+                                                                            <div class="col-4">
                                                                                 <h6><span
-                                                                                        style="font-weight: 600;">Lương
-                                                                                        cơ bản:</span> 15.000.000 VND
+                                                                                        style="font-weight: 600;">CCCD:</span>
+                                                                                    091275632831</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Ngày
+                                                                                        nhận: </span>25/09/2024</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Ngày
+                                                                                        Trả:</span> 27/09/2024</h6>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-2">
+                                                                            <div class="col-4">
+                                                                                <h6> <span
+                                                                                        style="font-weight: 600;">Email:
+                                                                                    </span> nhat029@gmail.com</h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Tổng
+                                                                                        số ngày: </span> 2 </h6>
+                                                                            </div>
+                                                                            <div class="col-4">
+                                                                                <h6><span style="font-weight: 600;">Hạng
+                                                                                        phòng: </span> VIP </h6>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="row mt-2">
+                                                                            <div class="col-4 ">
+                                                                                <h6><span style="font-weight: 600;">
+                                                                                        Yêu cầu: </span>Sạch sẽ
                                                                                 </h6>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-5 d-flex pe-2  justify-content-end">
-                                                                                <h6><span style="font-weight: 600;">Mã
-                                                                                        Nhân Viên:</span> QL00001</h6>
+
+                                                                            <div class="col-4 form-group"
+                                                                                style="display: flex;">
+                                                                                <!-- Chỉnh lại label không sử dụng <h6> -->
+                                                                                <label for="select-gender"
+                                                                                    style="font-weight: 600; margin-right: 10px;">Tên
+                                                                                    Phòng:</label>
+
+                                                                                <!-- Hộp chọn select -->
+                                                                                <select id="select-gender"
+                                                                                    class="form-select"
+                                                                                    aria-label="Default select example"
+                                                                                    style="font-weight: 400; width: 100px; height: 35px;">
+                                                                                    <option selected>PL01</option>
+                                                                                    <option value="1">PL02</option>
+                                                                                    <option value="2">PL03</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-4 ">
+                                                                                <h6><span style="font-weight: 600;">
+                                                                                        Thanh toán: </span> 900000 VND
+                                                                                </h6>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -396,300 +274,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal"
-                                            data-bs-target="#sua" data-bs-dismiss="modal"
-                                            style="font-size: small;">Sửa</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="sua" tabindex="-1" aria-labelledby="sua"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
-                                                    <div class="modal-header d-flex justify-content-center">
-                                                        <div>
-                                                            <h5 style="font-weight: bolder;">Sửa thông tin nhân viên
-                                                            </h5>
-                                                        </div>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Họ và
-                                                                        Tên</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Huỳnh Quốc Bảo"
-                                                                        aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Giới
-                                                                        tính</label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Nam</option>
-                                                                        <option value="1">Nữ</option>
-                                                                        <option value="2">Khác</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Căn cước
-                                                                        công dân</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="099292929" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Số điện
-                                                                        thoại</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="077362782" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Chức vụ
-                                                                    </label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Quản lý </option>
-                                                                        <option value="1">Bảo vệ</option>
-                                                                        <option value="2">Lễ tân</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Địa
-                                                                        chỉ</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Cần Thơ" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                                    <input type="file" id="imageInput" accept="image/*">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- footer -->
-                                                    <div class="container my-2">
-                                                        <div class="row" style="justify-content: flex-end;">
-                                                            <div class="col-3 m-2 d-flex justify-content-end">
-                                                                <button type="button" class="btn btn-success"
-                                                                    style="font-size: small;">Đồng ý</button>
-                                                            </div>
-                                                        </div>
+                                                    <div class="container my-2 d-flex justify-content-end">
+                                                        <button type="button" class="btn btn-success">Hoàn tất</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-danger"
-                                            style="font-size: small;">Xóa</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td class="me-2">QL00001</td>
-                                    <td>Huỳnh Quốc Bảo</td>
-                                    <td>Nam</td>
-                                    <td>090013332</td>
-                                    <td>Quản lý</td>
-                                    <td>Cần Thơ</td>
-                                    <td class="d-flex  justify-content-end">
-                                        <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
-                                            style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
-                                            tiết</a>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
-                                                    <div class="modal-header d-flex justify-content-center">
-                                                        <div>
-                                                            <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
-                                                        </div>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-2">
-                                                                    <img src="images/team-4.jpg" alt=""
-                                                                        style="width: 130px;">
-                                                                    <h5 class="text-center mt-2 ms-2"
-                                                                        style="font-weight: 600;">Quản Lý</h5>
-                                                                </div>
-                                                                <div class="col-10">
-                                                                    <div class="container ms-3">
-                                                                        <div class="row">
-                                                                            <h4 style="font-weight: 600;">Huỳnh Quốc Bảo
-                                                                            </h4>
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-8">
-                                                                                <h6> <span style="font-weight: 600;">Căn
-                                                                                        cước công dân:</span>
-                                                                                    09977364764</h6>
-                                                                            </div>
-                                                                            <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Giới
-                                                                                        Tính:</span> Nam</h6>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-8">
-                                                                                <h6><span style="font-weight: 600;">Số
-                                                                                        điện thoại:</span> 0977476400
-                                                                                </h6>
-                                                                            </div>
-                                                                            <div class="col-4">
-                                                                                <h6><span style="font-weight: 600;">Địa
-                                                                                        Chỉ:</span> Cần Thơ</h6>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-7">
-                                                                                <h6><span
-                                                                                        style="font-weight: 600;">Lương
-                                                                                        cơ bản:</span> 15.000.000 VND
-                                                                                </h6>
-                                                                            </div>
-                                                                            <div
-                                                                                class="col-5 d-flex pe-2  justify-content-end">
-                                                                                <h6><span style="font-weight: 600;">Mã
-                                                                                        Nhân Viên:</span> QL00001</h6>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal"
-                                            data-bs-target="#sua" data-bs-dismiss="modal"
-                                            style="font-size: small;">Sửa</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="sua" tabindex="-1" aria-labelledby="sua"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-lg">
-                                                <div class="modal-content" style="border-radius: 20px;">
-                                                    <div class="modal-header d-flex justify-content-center">
-                                                        <div>
-                                                            <h5 style="font-weight: bolder;">Sửa thông tin nhân viên
-                                                            </h5>
-                                                        </div>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Họ và
-                                                                        Tên</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Huỳnh Quốc Bảo"
-                                                                        aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Giới
-                                                                        tính</label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Nam</option>
-                                                                        <option value="1">Nữ</option>
-                                                                        <option value="2">Khác</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Căn cước
-                                                                        công dân</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="099292929" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Số điện
-                                                                        thoại</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="077362782" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Chức vụ
-                                                                    </label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example"
-                                                                        style="font-weight: 700;">
-                                                                        <option selected>Quản lý </option>
-                                                                        <option value="1">Bảo vệ</option>
-                                                                        <option value="2">Lễ tân</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <label for="" class="ms-1 mb-1 label-modal">Địa
-                                                                        chỉ</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Cần Thơ" aria-label="Username"
-                                                                        aria-describedby="addon-wrapping"
-                                                                        style="font-weight: 700;">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mt-3">
-                                                                <div class="col-6">
-                                                                    <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                                    <input type="file" id="imageInput" accept="image/*">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- footer -->
-                                                    <div class="container my-2">
-                                                        <div class="row" style="justify-content: flex-end;">
-                                                            <div class="col-3 m-2 d-flex justify-content-end">
-                                                                <button type="button" class="btn btn-success"
-                                                                    style="font-size: small;">Đồng ý</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn-danger"
-                                            style="font-size: small;">Xóa</button>
                                     </td>
                                 </tr>
                             </tbody>
