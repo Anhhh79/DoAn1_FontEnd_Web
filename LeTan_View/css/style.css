@@ -186,4 +186,18 @@ a.sidebar-link:hover {
 .cusor {
     cursor: pointer;
 }
+
+.scroll-content {
+    height: 200px;
+    width: 160px;
+    overflow-y: scroll;
+}
+
+.dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+.dropdown-item:hover {
+    background-color: white;
+}
 @media (min-width: 768px) {}

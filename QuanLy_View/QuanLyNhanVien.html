@@ -1,4 +1,4 @@
-<div class="main" class="" id="content">
+<div>
     <nav class="navbar navbar-expand px-4 py-3">
         <div class="navbar-collapse collapse">
             <ul class="navbar-nav justify-content-between" style="width: 1380px;">
@@ -19,7 +19,6 @@
     <main class="content px-3 py-3">
         <div class="container-fluid">
             <div>
-
                 <div class="row justify-content-between mx-1 mb-4">
                     <div class="input-group d-flex align-items-center border border-dark rounded"
                         style="width: 300px;padding: 0;">
@@ -38,20 +37,19 @@
                                     <div>
                                         <h5 style="font-weight: bolder;">Thêm nhân viên</h5>
                                     </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                                <label for="fullname" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                                <input type="text" class="form-control" id="fullname" placeholder="" required>
+                                                <span id="fullnameError" class="error text-danger"></span>
                                             </div>
                                             <div class="col-6">
                                                 <label class="mb-1 ms-1 label-modal">Giới tính</label>
-                                                <select class="form-select" aria-label="Default select example">
+                                                <select class="form-select" id="gender" required>
                                                     <option selected>Nam</option>
                                                     <option value="1">Nữ</option>
                                                     <option value="2">Khác</option>
@@ -60,41 +58,40 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Căn cước công dân</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                                <label for="cccd" class="ms-1 mb-1 label-modal">Căn cước công dân</label>
+                                                <input type="text" class="form-control" id="cccd" placeholder="" required>
+                                                <span id="cccdError" class="error text-danger"></span>
                                             </div>
                                             <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Số điện thoại</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                                <label for="phone" class="ms-1 mb-1 label-modal">Số điện thoại</label>
+                                                <input type="text" class="form-control" id="phone" placeholder="" required>
+                                                <span id="phoneError" class="error text-danger"></span>
                                             </div>
                                         </div>
-
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <label class="mb-1 ms-1 label-modal">Chức vụ </label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Quản lý </option>
+                                                <label class="mb-1 ms-1 label-modal">Chức vụ</label>
+                                                <select class="form-select" id="position" required>
+                                                    <option selected>Quản lý</option>
                                                     <option value="1">Bảo vệ</option>
                                                     <option value="2">Lễ tân</option>
                                                 </select>
                                             </div>
                                             <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Địa chỉ</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                                <label for="address" class="ms-1 mb-1 label-modal">Địa chỉ</label>
+                                                <input type="text" class="form-control" id="address" placeholder="" required>
+                                                <span id="addressError" class="error text-danger"></span>
                                             </div>
-                                        </div>
 
-                                        <div class="row mt-3">
-                                            <div class="col-6">
-                                                <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                <input type="file" id="imageInput" accept="image/*">
-                                            </div>
-                                            <div class="col-6">
-                                                <img id="imagePreview" src="" alt="Xem trước ảnh"
-                                                    style="max-width: 55px; display: none;">
+                                            <div class="row mt-1">
+                                                <div class="col-6">
+                                                    <label class="mb-1 ms-1 label-modal">Ảnh </label>
+                                                    <input type="file" id="imageInput" accept="image/*">
+                                                </div>
+                                                <div class="col-6">
+                                                    <img id="imagePreview" src="" alt="Xem trước ảnh"
+                                                        style="max-width: 55px; display: none;">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -103,16 +100,15 @@
                                 <div class="container my-2">
                                     <div class="row" style="justify-content: flex-end;">
                                         <div class="col-3 m-2 d-flex justify-content-end">
-                                            <button type="button" class="btn btn-success" style="font-size: small;">Thêm
-                                                nhân viên</button>
+                                            <button type="button" id="addEmployee" class="btn btn-success" style="font-size: small;">Thêm nhân viên</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
                 <div class="row mt-2">
                     <div class="col-12">
                         <table class="table">
@@ -699,4 +695,56 @@
             </div>
         </div>
     </main>
+    <script>
+        document.getElementById("addEmployee").addEventListener("click", function() {
+    // Lấy giá trị từ các input
+    let fullname = document.getElementById("fullname").value.trim();
+    let cccd = document.getElementById("cccd").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+
+    // Reset thông báo lỗi
+    document.getElementById("fullnameError").textContent = "";
+    document.getElementById("cccdError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("addressError").textContent = "";
+
+    let hasError = false;
+
+    // Kiểm tra Họ và Tên
+    if (fullname === "") {
+        document.getElementById("fullnameError").textContent = "Họ và tên không được bỏ trống";
+        hasError = true;
+    }
+
+    // Kiểm tra CCCD (phải là số và có đúng 12 ký tự)
+    if (cccd === "" || !/^\d{12}$/.test(cccd)) {
+        document.getElementById("cccdError").textContent = "Căn cước công dân phải là 12 chữ số";
+        hasError = true;
+    }
+
+    // Kiểm tra số điện thoại (phải là số và có 10 chữ số)
+    if (phone === "" || !/^\d{10}$/.test(phone)) {
+        document.getElementById("phoneError").textContent = "Số điện thoại phải là 10 chữ số";
+        hasError = true;
+    }
+
+    // Kiểm tra địa chỉ
+    if (address === "") {
+        document.getElementById("addressError").textContent = "Địa chỉ không được bỏ trống";
+        hasError = true;
+    }
+
+    // Nếu có lỗi thì không cho submit
+    if (hasError) {
+        return;
+    }
+
+    // Nếu không có lỗi, có thể thực hiện tiếp hành động thêm nhân viên (submit form, gọi API, v.v.)
+    alert("Thêm nhân viên thành công!");
+});
+
+        console.log('Script từ nội dung mới đã chạy!');
+        alert('Nội dung đã được tải thành công!');
+    </script>
 </div>
