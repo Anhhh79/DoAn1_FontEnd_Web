@@ -1028,14 +1028,13 @@
                     <div class="input-group mb-3" style="width: 600;">
                         <input id="SoDienThoaiTraCuu" type="text" class="form-control" placeholder="Nhập số điện thoại"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <a class="btn btn-Secondary text-center" onclick="clearPhoneNumber()" data-bs-toggle="modal"
-                            data-bs-target="#OTP"><i class="fa-solid fa-magnifying-glass pt-1"></i></i></a>
+                        <a class="btn btn-Secondary text-center" onclick="validatePhoneNumber(), clearPhoneNumber()" id="btnTraCuu"><i class="fa-solid fa-magnifying-glass pt-1"></i></i></a>
                     </div>
                 </div>
 
             </div>
             <!-- modal OTP -->
-            <div class="modal fade" id="OTP" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true"
+            <div class="modal fade" id="OTPTraCuu" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true"
                 onclick="clearOtpInputs()">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content" style="border-radius: 20px;">
@@ -1053,15 +1052,14 @@
                                             <h4>Xác Nhận OTP</h4>
                                             <p>Mã OTP sẽ được gửi qua số điện thoại của bạn</p>
                                             <div class="otp-field mb-4">
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
                                             </div>
-                                            <a class="btn btn-warning text-light mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#LichSu" data-bs-dismiss="modal" aria-label="Close">Xác
+                                            <a class="btn btn-warning text-light mb-3" onclick="checkOTPTraCuu()">Xác
                                                 Nhận</a>
                                             <p class="resend text-muted mb-0">Didn't receive code? <a href=""
                                                     class="text-warning">Request
@@ -1078,7 +1076,7 @@
         </div>
 
         <!-- modal hien thi lich su dat phong -->
-        <div class="modal fade" id="Lichsu" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true">
+        <div class="modal fade" id="LichSuDatPhong" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content" style="border-radius: 20px;">
                     <!-- header -->
@@ -1353,9 +1351,8 @@
                     </div>
                     <!-- modal footer -->
                     <div class="modal-footer">
-                        <a href="#" class="btn btn-warning text-light"
-                            onclick="clearDataAssessInput(), clearStarAssess()" data-bs-dismiss="modal"
-                            aria-label="Close">Gửi Đánh Giá</a>
+                        <a class="btn btn-warning text-light"
+                            onclick="validateAssessmentForm()">Gửi Đánh Giá</a>
                     </div>
                 </div>
             </div>
@@ -1419,5 +1416,47 @@
         });
     </script>
 </body>
+<script>
+    // trang thanh toán
+function showAlert(message) {
+    const alertBox = document.getElementById('customAlert');
+    const alertMessage = document.getElementById('alertMessage');
 
+    alertMessage.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 2000); // Tự động ẩn sau 2 giây
+}
+
+function validateForm() {
+    const fullName = document.getElementById('fullName').value.trim();
+    const phoneNumber = document.getElementById('phoneNumber').value.trim();
+    const cccd = document.getElementById('cccd').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    //Kiểm tra ký tự đặc biệt
+    if(containsSpecialCharacters(fullName)){
+        alert("Tên không được chưas kí tự đặc biệt.")
+    }
+    // Kiểm tra số CCCD (12 chữ số)
+    const cccdRegex = /^[0-9]{12}$/;
+    if (!cccdRegex.test(cccd)) {
+        showAlert("Số CCCD không hợp lệ! Vui lòng nhập số CCCD gồm 12 chữ số.");
+        return false;
+    }
+
+    showAlert("Tất cả thông tin đều hợp lệ.");
+    return true;
+}
+
+function containsSpecialCharacters(str) {
+    // Biểu thức chính quy kiểm tra ký tự đặc biệt
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/g;
+
+    // Kiểm tra và trả về true nếu có ký tự đặc biệt, ngược lại false
+    return specialCharRegex.test(str);
+}
+</script>
 </html>

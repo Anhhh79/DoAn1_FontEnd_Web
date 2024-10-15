@@ -64,6 +64,7 @@
         </div>
     </header>
     <!-- body -->
+
     <body style="background-color: #E5E5E5">
         <div class="container pb-5">
             <div class="text-center p-3 m-2">
@@ -78,29 +79,30 @@
                             <div class="row mt-3">
                                 <div class="col">
                                     <label for="fullName" class="form-label">Họ Và Tên</label>
-                                    <input type="text" id="fullName" class="form-control" placeholder="Full name"
-                                        aria-label="Full name" required>
+                                    <input type="text" id="fullNameThanhToan" class="form-control"
+                                        placeholder="Full name" aria-label="Full name" required>
                                 </div>
                                 <div class="col mb-3">
                                     <label for="Country" class="form-label">Giới Tính</label>
-                                    <select class="form-select" id="Country" aria-label="Default select example">
+                                    <select class="form-select" id="sexThanhToan" aria-label="Default select example">
                                         <option value="1">Nam</option>
                                         <option value="2">Nữ</option>
                                         <option value="3">Khác</option>
                                     </select>
                                 </div>
-                                
+
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="cccd" class="form-label">Số Căn Cước Công Dân</label>
-                                    <input type="text" id="cccd" class="form-control" placeholder="ID number"
-                                        aria-label="cccd" required>
+                                    <input type="text" class="form-control" id="cccdThanhToan" aria-describedby="cccdHelp"
+                                        placeholder="Nhập số CCCD" pattern="[0-9]{12}" title="Số CCCD gồm 12 chữ số"
+                                        required>
                                 </div>
-                                
+
                                 <div class="col mb-3">
                                     <label for="PhoneNumber" class="form-label">Số Điện Thoại</label>
-                                    <input type="tel" class="form-control" id="PhoneNumber"
+                                    <input type="tel" class="form-control" id="PhoneNumberThanhToan"
                                         aria-describedby="phoneNumber" placeholder="Phone Number" pattern="[0-9]{10}"
                                         title="Số điện thoại gồm 10 chữ số" required>
                                 </div>
@@ -108,13 +110,13 @@
                             <div class="row">
                                 <div class=" col mb-3">
                                     <label for="phoneNumber1" class="form-label">Nhập Lại Số Điện Thoại</label>
-                                    <input type="tel" class="form-control" id="EmailAddress"
+                                    <input type="tel" class="form-control" id="PhoneNumberThanhToan2"
                                         aria-describedby="phoneNumber1" placeholder="Phone Number" pattern="[0-9]{10}"
                                         title="Số điện thoại gồm 10 chữ số" required>
                                 </div>
                                 <div class=" col mb-3">
                                     <label for="EmailAddress" class="form-label">Địa Chỉ Email</label>
-                                    <input type="email" class="form-control" id="EmailAddress"
+                                    <input type="email" class="form-control" id="EmailAddressThanhToan"
                                         aria-describedby="emailHelp" placeholder="...@gmail.com" required>
                                 </div>
                             </div>
@@ -136,18 +138,21 @@
                                     </select>
                                 </div>
                                 <div class="mb-3 form-check pt-3">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Vui lòng đọc kỹ và đồng ý với
+                                    <input type="checkbox" class="form-check-input" id="checkDieuKhoanThanhToan">
+                                    <label class="form-check-label" for="checkDieuKhoanThanhToan">Vui lòng đọc kỹ và đồng ý với
                                         điều
                                         khoản
                                         đặt phòng bằng cách đánh dấu vào ô bên cạnh.</label>
                                 </div>
-                                <a href="#" class="btn bg-color text-light text-center"><b>Thanh Toán</b></a>
+                                <button class="btn bg-color text-light text-center"
+                                    onclick="CheckDataFormThanhToan()"><b>Thanh
+                                        Toán</b></button>
                             </div>
                         </div>
                     </div>
                     <!-- Thong tin dat phong -->
-                    <div class="col-4 rounded" style="width: 500px; height: 692px; margin-left: 20px; background: white;">
+                    <div class="col-4 rounded"
+                        style="width: 500px; height: 692px; margin-left: 20px; background: white;">
                         <div class="container p-3">
                             <div class="textTitleRoom">
                                 <h5>Thông tin đặt phòng</h5>
@@ -250,7 +255,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                             </div>
                             <hr>
                             <div>
@@ -267,7 +272,9 @@
                                     </div>
                                 </div>
                                 <div class="mt-2 text-center pt-2">
-                                   <span style="font-weight: bold;">Lưu ý: </span><span style="color: red;">Để đặt phòng bạn cần phải thanh toán 100% số tiền và có thể hủy đặt phòng thông qua lịch sử đặt phòng</span>
+                                    <span style="font-weight: bold;">Lưu ý: </span><span style="color: red;">Để đặt
+                                        phòng bạn cần phải thanh toán 100% số tiền và có thể hủy đặt phòng thông qua
+                                        lịch sử đặt phòng</span>
                                 </div>
                             </div>
                         </div>
@@ -326,6 +333,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
