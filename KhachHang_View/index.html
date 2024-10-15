@@ -1051,7 +1051,7 @@
                                         <div class="card-body text-center">
                                             <h4>Xác Nhận OTP</h4>
                                             <p>Mã OTP sẽ được gửi qua số điện thoại của bạn</p>
-                                            <div class="otp-field mb-4">
+                                            <div class="otp-field mb-2">
                                                 <input type="number" maxlength="1" class="otp-input" />
                                                 <input type="number" maxlength="1" class="otp-input" />
                                                 <input type="number" maxlength="1" class="otp-input" />
@@ -1059,6 +1059,7 @@
                                                 <input type="number" maxlength="1" class="otp-input" />
                                                 <input type="number" maxlength="1" class="otp-input" />
                                             </div>
+                                            <div id="otpError" class="text-danger pb-2"></div>
                                             <a class="btn btn-warning text-light mb-3" onclick="checkOTPTraCuu()">Xác
                                                 Nhận</a>
                                             <p class="resend text-muted mb-0">Didn't receive code? <a href=""
@@ -1323,12 +1324,14 @@
                             <label for="fullNameAssess" class="form-label">Họ Và Tên</label>
                             <input type="text" id="fullNameAssess" class="form-control Assess"
                                 placeholder="Nhập họ tên của bạn" aria-label="Full name" required>
+                                <div id="fullNameError" class="text-danger" style="font-size: 0.875rem;"></div>
                         </div>
                         <div class="mb-3">
                             <label for="PhoneNumberAssess" class="form-label">Số Điện Thoại</label>
                             <input type="tel" class="form-control Assess" id="PhoneNumberAssess"
                                 aria-describedby="phoneNumber" placeholder="Nhập số điện thoại đã đặt phòng"
                                 pattern="[0-9]{10}" title="Số điện thoại gồm 10 chữ số" required>
+                                <div id="phoneNumberError" class="text-danger" style="font-size: 0.875rem;"></div>
                         </div>
                         <!-- <div class="mb-3">
                             <label for="ContentAssess" class="form-label">Nội Dung Đánh Giá</label>
@@ -1348,6 +1351,7 @@
                             <input type="radio" class="star" id="star1" name="rating" value="1" />
                             <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
                         </div>
+                        <div id="starRatingError" class="text-danger" style="font-size: 0.875rem;"></div>
                     </div>
                     <!-- modal footer -->
                     <div class="modal-footer">
@@ -1416,47 +1420,5 @@
         });
     </script>
 </body>
-<script>
-    // trang thanh toán
-function showAlert(message) {
-    const alertBox = document.getElementById('customAlert');
-    const alertMessage = document.getElementById('alertMessage');
 
-    alertMessage.textContent = message;
-    alertBox.style.display = 'block';
-
-    setTimeout(() => {
-        alertBox.style.display = 'none';
-    }, 2000); // Tự động ẩn sau 2 giây
-}
-
-function validateForm() {
-    const fullName = document.getElementById('fullName').value.trim();
-    const phoneNumber = document.getElementById('phoneNumber').value.trim();
-    const cccd = document.getElementById('cccd').value.trim();
-    const email = document.getElementById('email').value.trim();
-
-    //Kiểm tra ký tự đặc biệt
-    if(containsSpecialCharacters(fullName)){
-        alert("Tên không được chưas kí tự đặc biệt.")
-    }
-    // Kiểm tra số CCCD (12 chữ số)
-    const cccdRegex = /^[0-9]{12}$/;
-    if (!cccdRegex.test(cccd)) {
-        showAlert("Số CCCD không hợp lệ! Vui lòng nhập số CCCD gồm 12 chữ số.");
-        return false;
-    }
-
-    showAlert("Tất cả thông tin đều hợp lệ.");
-    return true;
-}
-
-function containsSpecialCharacters(str) {
-    // Biểu thức chính quy kiểm tra ký tự đặc biệt
-    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/g;
-
-    // Kiểm tra và trả về true nếu có ký tự đặc biệt, ngược lại false
-    return specialCharRegex.test(str);
-}
-</script>
 </html>
