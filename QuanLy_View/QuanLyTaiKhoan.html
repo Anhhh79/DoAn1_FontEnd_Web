@@ -222,11 +222,9 @@
 
             // Nếu không có lỗi, tiếp tục xử lý thêm tài khoản
             if (!hasError) {
-                console.log('Thêm tài khoản thành công:', {
-                    position: position.value,
-                    password: password,
-                });
-                // Có thể thêm logic để lưu tài khoản ở đây
+                alert("Thêm tài khoản thành công");
+                document.getElementById('position').value = '';
+                document.getElementById('password').value = '';
             }
         });
 
@@ -272,11 +270,9 @@
 
             // Nếu không có lỗi, tiếp tục xử lý thêm tài khoản
             if (!hasError) {
-                console.log('Sửa tài khoản thành công:', {
-                    position: position.value,
-                    password: password,
-                });
-                // Có thể thêm logic để lưu tài khoản ở đây
+                alert("Sửa thông tin tài khoản thành công");
+                document.getElementById('Editposition').value = '';
+                document.getElementById('Editpassword').value = '';
             }
         });
 

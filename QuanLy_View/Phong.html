@@ -249,8 +249,9 @@
 
         // Nếu tất cả các trường hợp đều hợp lệ, tiếp tục xử lý
         if (isValid) {
-            alert('Dữ liệu hợp lệ. Tiến hành thêm phòng.');
-            // Thực hiện các thao tác tiếp theo khi dữ liệu hợp lệ (ví dụ: gửi dữ liệu lên server)
+            alert('Thêm phòng thành công');
+            document.getElementById('HangPhong').value = '';
+            document.getElementById('tenPhong').value = '';
         }
     });
 </script>
@@ -288,9 +289,9 @@
 
         // Nếu không có lỗi, thực hiện hành động cần thiết (ví dụ: gửi dữ liệu)
         if (!hasError) {
-            // Gửi dữ liệu hoặc thực hiện hành động khác
-            console.log('Thực hiện hành động sửa thông tin phòng');
-            // Gọi API hoặc thực hiện logic sửa thông tin
+            alert('Sửa thông tin phòng thành công');
+            document.getElementById('EditHangPhong').value = '';
+            document.getElementById('EdittenPhong').value = '';
         }
     });
 

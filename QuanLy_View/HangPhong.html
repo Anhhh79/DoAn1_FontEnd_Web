@@ -317,19 +317,19 @@
 
             // Kiểm tra "Giá"
             if (gia === '' || isNaN(gia) || Number(gia) <= 0) {
-                document.getElementById('errorGia').textContent = 'Giá phải là số dương';
+                document.getElementById('errorGia').textContent = 'Giá phải không được để trống';
                 isValid = false;
             }
 
             // Kiểm tra "Số giường"
             if (soGiuong === '' || isNaN(soGiuong) || Number(soGiuong) <= 0) {
-                document.getElementById('errorSoGiuong').textContent = 'Số giường phải là số dương';
+                document.getElementById('errorSoGiuong').textContent = 'Số giường không được để trống';
                 isValid = false;
             }
 
             // Kiểm tra "Diện tích"
             if (dienTich === '' || isNaN(dienTich) || Number(dienTich) <= 0) {
-                document.getElementById('errorDienTich').textContent = 'Diện tích phải là số dương';
+                document.getElementById('errorDienTich').textContent = 'Diện tích không được để trống';
                 isValid = false;
             }
 
@@ -350,8 +350,13 @@
 
             // Nếu tất cả các trường hợp đều hợp lệ, tiến hành xử lý thêm hạng phòng
             if (isValid) {
-                alert('Dữ liệu hợp lệ, thêm hạng phòng thành công!');
-                // Thực hiện các hành động khi dữ liệu hợp lệ (ví dụ: gửi dữ liệu tới server)
+                alert('Thêm hạng phòng thành công.');
+                document.getElementById('EdittenHangPhong').value = '';
+                document.getElementById('Editgia').value = '';
+                document.getElementById('EditsoGiuong').value = '';
+                document.getElementById('EditdienTich').value = '';
+                document.getElementById('EditimageInput').value;
+                document.getElementById('EditmoTa').value = '';
             }
         });
     </script>
@@ -392,19 +397,19 @@
 
             // Kiểm tra "Giá"
             if (gia === '' || isNaN(gia) || Number(gia) <= 0) {
-                document.getElementById('EditerrorGia').textContent = 'Giá phải là số dương';
+                document.getElementById('EditerrorGia').textContent = 'Giá phải không được để trống';
                 isValid = false;
             }
 
             // Kiểm tra "Số giường"
             if (soGiuong === '' || isNaN(soGiuong) || Number(soGiuong) <= 0) {
-                document.getElementById('EditerrorSoGiuong').textContent = 'Số giường phải là số dương';
+                document.getElementById('EditerrorSoGiuong').textContent = 'Số giường không được để trống';
                 isValid = false;
             }
 
             // Kiểm tra "Diện tích"
             if (dienTich === '' || isNaN(dienTich) || Number(dienTich) <= 0) {
-                document.getElementById('EditerrorDienTich').textContent = 'Diện tích phải là số dương';
+                document.getElementById('EditerrorDienTich').textContent = 'Diện tích không được để trống';
                 isValid = false;
             }
 
@@ -425,8 +430,14 @@
 
             // Nếu tất cả các trường hợp đều hợp lệ, tiếp tục xử lý
             if (isValid) {
-                alert('Dữ liệu hợp lệ. Tiến hành sửa thông tin hạng phòng.');
-                // Thực hiện các thao tác tiếp theo khi dữ liệu hợp lệ (ví dụ: gửi dữ liệu lên server)
+                alert('Sửa thông tin hạng phòng thành công.');
+                document.getElementById('EdittenHangPhong').value = '';
+                document.getElementById('Editgia').value = '';
+                document.getElementById('EditsoGiuong').value = '';
+                document.getElementById('EditdienTich').value = '';
+                document.getElementById('EditimageInput').value;
+                document.getElementById('EditmoTa').value = '';
+
             }
         });
 

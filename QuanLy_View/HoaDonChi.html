@@ -146,13 +146,13 @@
 
             // Kiểm tra số lượng
             if (isNaN(soLuong.value) || soLuong.value.trim() === '' || Number(soLuong.value) <= 0) {
-                document.getElementById('errorSoLuong').innerText = 'Số lượng phải là một số dương.';
+                document.getElementById('errorSoLuong').innerText = 'Số lượng không được để trống.';
                 hasError = true;
             }
 
             // Kiểm tra giá
             if (isNaN(gia.value) || gia.value.trim() === '' || Number(gia.value) < 0) {
-                document.getElementById('errorGia').innerText = 'Giá phải là một số dương.';
+                document.getElementById('errorGia').innerText = 'Giá phải không được để trống.';
                 hasError = true;
             } else if (specialCharRegex.test(gia.value)) {
                 document.getElementById('errorGia').innerText = 'Giá không được chứa ký tự đặc biệt.';
@@ -165,8 +165,12 @@
                 const giaValue = Number(gia.value);
                 const totalValue = soLuongValue * giaValue;
                 tongGiaTri.value = totalValue.toFixed(2); // Cập nhật tổng giá trị
-                console.log('Lập hóa đơn thành công');
-                // Có thể thêm logic để gửi hóa đơn ở đây
+                alert("Lập hóa đơn thành công");
+                document.getElementById('tenMatHang').value = '';
+                document.getElementById('soLuong').value = '';
+                document.getElementById('gia').value = '';
+                document.getElementById('tongGiaTri').value = '';
+
             }
         });
 

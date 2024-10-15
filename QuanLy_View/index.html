@@ -110,7 +110,7 @@
                                 <img src="images/account.png" class="avatar img-fluid" alt="">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end rounded">
-        
+
                             </div>
                         </li>
                     </ul>
@@ -129,93 +129,6 @@
                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
                                 data-bs-dismiss="modal" style="width: 135px; font-size: small;">Thêm nhân
                                 viên</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content" style="border-radius: 20px;">
-                                        <div class="modal-header d-flex justify-content-center">
-                                            <div>
-                                                <h5 style="font-weight: bolder;">Thêm nhân viên</h5>
-                                            </div>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="fullname" class="ms-1 mb-1 label-modal">Họ và Tên</label>
-                                                        <input type="text" class="form-control" id="fullname" placeholder=""
-                                                            required>
-                                                        <span id="fullnameError" class="error text-danger"></span>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label class="mb-1 ms-1 label-modal">Giới tính</label>
-                                                        <select class="form-select" id="gender" required>
-                                                            <option value="">Chọn giới tính</option>
-                                                            <option value="Nam">Nam</option>
-                                                            <option value="Nữ">Nữ</option>
-                                                            <option value="Khác">Khác</option>
-                                                        </select>
-                                                        <span class="error text-danger" id="genderError"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-3">
-                                                    <div class="col-6">
-                                                        <label for="cccd" class="ms-1 mb-1 label-modal">Căn cước công
-                                                            dân</label>
-                                                        <input type="text" class="form-control" id="cccd" placeholder=""
-                                                            required>
-                                                        <span id="cccdError" class="error text-danger"></span>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="phone" class="ms-1 mb-1 label-modal">Số điện thoại</label>
-                                                        <input type="text" class="form-control" id="phone" placeholder=""
-                                                            required>
-                                                        <span id="phoneError" class="error text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-3">
-                                                    <div class="col-6">
-                                                        <label class="mb-1 ms-1 label-modal">Chức vụ</label>
-                                                        <select class="form-select" id="position" required>
-                                                            <option value="">Chọn chức vụ</option>
-                                                            <option value="Quản lý">Quản lý</option>
-                                                            <option value="Bảo vệ">Bảo vệ</option>
-                                                            <option value="Lễ tân">Lễ tân</option>
-                                                        </select>
-                                                        <span class="error text-danger" id="positionError"></span>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="address" class="ms-1 mb-1 label-modal">Địa chỉ</label>
-                                                        <input type="text" class="form-control" id="address" placeholder=""
-                                                            required>
-                                                        <span id="addressError" class="error text-danger"></span>
-                                                    </div>
-        
-                                                    <div class="row mt-1">
-                                                        <div class="col-6">
-                                                            <label class="mb-1 ms-1 label-modal">Ảnh </label>
-                                                            <input type="file" id="AddimageInput" accept="image/*">
-                                                            <span class="error text-danger" id="imageError"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- footer -->
-                                        <div class="container my-2">
-                                            <div class="row" style="justify-content: flex-end;">
-                                                <div class="col-3 m-2 d-flex justify-content-end">
-                                                    <button type="button" class="btn btn-success addEmployee"
-                                                        style="font-size: small;">Thêm nhân viên</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
                         </div>
                         <div class="row mt-2">
                             <div class="col-12">
@@ -242,79 +155,10 @@
                                             <td>Quản lý</td>
                                             <td>Cần Thơ</td>
                                             <td class="d-flex  justify-content-end">
-                                                <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
+                                                <a class="cusor me-2 mt-1" data-bs-toggle="modal"
+                                                    data-bs-target="#chitiet"
                                                     style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
                                                     tiết</a>
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
-                                                    aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg">
-                                                        <div class="modal-content" style="border-radius: 20px;">
-                                                            <div class="modal-header d-flex justify-content-center">
-                                                                <div>
-                                                                    <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
-                                                                </div>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-2">
-                                                                            <img src="images/team-4.jpg" alt=""
-                                                                                style="width: 130px;">
-                                                                            <h5 class="text-center mt-2 ms-2"
-                                                                                style="font-weight: 600;">Quản Lý</h5>
-                                                                        </div>
-                                                                        <div class="col-10">
-                                                                            <div class="container ms-3">
-                                                                                <div class="row">
-                                                                                    <h4 style="font-weight: 600;">Huỳnh Quốc Bảo
-                                                                                    </h4>
-                                                                                </div>
-                                                                                <div class="row mt-2">
-                                                                                    <div class="col-8">
-                                                                                        <h6> <span style="font-weight: 600;">Căn
-                                                                                                cước công dân:</span>
-                                                                                            09977364764</h6>
-                                                                                    </div>
-                                                                                    <div class="col-4">
-                                                                                        <h6><span style="font-weight: 600;">Giới
-                                                                                                Tính:</span> Nam</h6>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="row mt-2">
-                                                                                    <div class="col-8">
-                                                                                        <h6><span style="font-weight: 600;">Số
-                                                                                                điện thoại:</span> 0977476400
-                                                                                        </h6>
-                                                                                    </div>
-                                                                                    <div class="col-4">
-                                                                                        <h6><span style="font-weight: 600;">Địa
-                                                                                                Chỉ:</span> Cần Thơ</h6>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="row mt-2">
-                                                                                    <div class="col-7">
-                                                                                        <h6><span
-                                                                                                style="font-weight: 600;">Lương
-                                                                                                cơ bản:</span> 15.000.000 VND
-                                                                                        </h6>
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="col-5 d-flex pe-2  justify-content-end">
-                                                                                        <h6><span style="font-weight: 600;">Mã
-                                                                                                Nhân Viên:</span> QL00001</h6>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <button type="button" class="btn btn-warning me-2 edit-btn"
                                                     data-bs-toggle="modal" data-bs-target="#suaModal"
                                                     style="font-size: small;">Sửa</button>
@@ -331,7 +175,8 @@
                                             <td>Quản lý</td>
                                             <td>Cần Thơ</td>
                                             <td class="d-flex  justify-content-end">
-                                                <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
+                                                <a class="cusor me-2 mt-1" data-bs-toggle="modal"
+                                                    data-bs-target="#chitiet"
                                                     style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
                                                     tiết</a>
                                                 <button type="button" class="btn btn-warning me-2 edit-btn"
@@ -348,6 +193,153 @@
                     </div>
                 </div>
             </main>
+            <!-- Modal thêm nhân viên -->
+            <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content" style="border-radius: 20px;">
+                        <div class="modal-header d-flex justify-content-center">
+                            <div>
+                                <h5 style="font-weight: bolder;">Thêm nhân viên</h5>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="fullname" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                        <input type="text" class="form-control" id="fullname" placeholder="" required>
+                                        <span id="fullnameError" class="error text-danger"></span>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="mb-1 ms-1 label-modal">Giới tính</label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                            <option value="Khác">Khác</option>
+                                        </select>
+                                        <span class="error text-danger" id="genderError"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6">
+                                        <label for="cccd" class="ms-1 mb-1 label-modal">Căn cước công
+                                            dân</label>
+                                        <input type="number" class="form-control" id="cccd" placeholder="" required>
+                                        <span id="cccdError" class="error text-danger"></span>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="phone" class="ms-1 mb-1 label-modal">Số điện thoại</label>
+                                        <input type="number" class="form-control" id="phone" placeholder="" required>
+                                        <span id="phoneError" class="error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6">
+                                        <label class="mb-1 ms-1 label-modal">Chức vụ</label>
+                                        <select class="form-select" id="position" required>
+                                            <option value="">Chọn chức vụ</option>
+                                            <option value="Quản lý">Quản lý</option>
+                                            <option value="Bảo vệ">Bảo vệ</option>
+                                            <option value="Lễ tân">Lễ tân</option>
+                                        </select>
+                                        <span class="error text-danger" id="positionError"></span>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="address" class="ms-1 mb-1 label-modal">Địa chỉ</label>
+                                        <input type="text" class="form-control" id="address" placeholder="" required>
+                                        <span id="addressError" class="error text-danger"></span>
+                                    </div>
+
+                                    <div class="row mt-1">
+                                        <div class="col-6">
+                                            <label class="mb-1 ms-1 label-modal">Ảnh </label>
+                                            <input type="file" id="AddimageInput" accept="image/*">
+                                            <span class="error text-danger" id="imageError"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- footer -->
+                        <div class="container my-2">
+                            <div class="row" style="justify-content: flex-end;">
+                                <div class="col-3 m-2 d-flex justify-content-end">
+                                    <button type="button" class="btn btn-success addEmployee"
+                                        style="font-size: small;">Thêm
+                                        nhân viên</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal chi tiết -->
+            <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content" style="border-radius: 20px;">
+                        <div class="modal-header d-flex justify-content-center">
+                            <div>
+                                <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="images/team-4.jpg" alt="" style="width: 130px;">
+                                        <h5 class="text-center mt-2 ms-2" style="font-weight: 600;">Quản Lý</h5>
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="container ms-3">
+                                            <div class="row">
+                                                <h4 style="font-weight: 600;">Huỳnh Quốc Bảo
+                                                </h4>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-8">
+                                                    <h6> <span style="font-weight: 600;">Căn
+                                                            cước công dân:</span>
+                                                        09977364764</h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6><span style="font-weight: 600;">Giới
+                                                            Tính:</span> Nam</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-8">
+                                                    <h6><span style="font-weight: 600;">Số
+                                                            điện thoại:</span> 0977476400
+                                                    </h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6><span style="font-weight: 600;">Địa
+                                                            Chỉ:</span> Cần Thơ</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-7">
+                                                    <h6><span style="font-weight: 600;">Lương
+                                                            cơ bản:</span> 15.000.000 VND
+                                                    </h6>
+                                                </div>
+                                                <div class="col-5 d-flex pe-2  justify-content-end">
+                                                    <h6><span style="font-weight: 600;">Mã
+                                                            Nhân Viên:</span> QL00001</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Modal sửa -->
             <div class="modal fade" id="suaModal" tabindex="-1" aria-labelledby="suaModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -378,12 +370,12 @@
                                 <div class="row mt-3">
                                     <div class="col-6">
                                         <label class="ms-1 mb-1">Căn cước công dân</label>
-                                        <input type="text" class="form-control" id="editCCCD" required>
+                                        <input type="number" class="form-control" id="editCCCD" required>
                                         <span class="error text-danger" id="EditcccdError"></span>
                                     </div>
                                     <div class="col-6">
                                         <label class="ms-1 mb-1">Số điện thoại</label>
-                                        <input type="text" class="form-control" id="editPhone" required>
+                                        <input type="number" class="form-control" id="editPhone" required>
                                         <span class="error text-danger" id="EditphoneError"></span>
                                     </div>
                                 </div>
@@ -413,7 +405,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="container my-2">
                             <div class="row" style="justify-content: flex-end;">
                                 <div class="col-3 m-2 d-flex justify-content-end">
@@ -431,18 +423,18 @@
                 document.getElementById('btnEdit').addEventListener('click', function (e) {
                     // Ngăn form submit nếu có lỗi
                     e.preventDefault();
-        
+
                     // Đặt biến để kiểm tra hợp lệ
                     let isValid = true;
-        
+
                     // Reset các thông báo lỗi trước khi kiểm tra
                     document.querySelectorAll('.error').forEach(function (el) {
                         el.textContent = '';
                     });
-        
+
                     // Biểu thức chính quy để kiểm tra ký tự đặc biệt
                     const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
-        
+
                     // Kiểm tra Họ và Tên
                     const fullname = document.getElementById('editFullname').value.trim();
                     if (fullname === '') {
@@ -452,14 +444,14 @@
                         document.getElementById('EditNameError').textContent = 'Họ và Tên không được chứa ký tự đặc biệt';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Giới tính
                     const gender = document.getElementById('editGender').value;
                     if (gender === '') {
                         document.getElementById('EditgenderError').textContent = 'Vui lòng chọn giới tính';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Căn cước công dân (CCCD)
                     const cccd = document.getElementById('editCCCD').value.trim();
                     if (cccd === '') {
@@ -469,7 +461,7 @@
                         document.getElementById('EditcccdError').textContent = 'Căn cước công dân phải gồm 12 chữ số';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Số điện thoại
                     const phone = document.getElementById('editPhone').value.trim();
                     if (phone === '') {
@@ -479,14 +471,14 @@
                         document.getElementById('EditphoneError').textContent = 'Số điện thoại phải gồm 10 chữ số';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Chức vụ
                     const position = document.getElementById('editPosition').value;
                     if (position === '') {
                         document.getElementById('EditpositionError').textContent = 'Vui lòng chọn chức vụ';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Địa chỉ
                     const address = document.getElementById('editAddress').value.trim();
                     if (address === '') {
@@ -496,22 +488,38 @@
                         document.getElementById('EditaddressError').textContent = 'Địa chỉ không được chứa ký tự đặc biệt';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Ảnh
                     const imageInput = document.getElementById('imageInput');
                     if (imageInput.files.length === 0) {
                         document.getElementById('EditimageError').textContent = 'Vui lòng chọn ảnh';
                         isValid = false;
                     }
-        
+
                     // Nếu tất cả các trường đều hợp lệ, tiếp tục xử lý
                     if (isValid) {
-                        console.log('Dữ liệu hợp lệ. Bạn có thể tiến hành các bước tiếp theo.');
-                        // Thực hiện các hành động tiếp theo, ví dụ như gửi form hoặc gọi API
-                        // document.getElementById('editForm').submit(); // Nếu có form
+                        alert("Bạn đã sửa thành công");
+
+                        // Làm sạch các trường nhập liệu
+                        document.getElementById('editFullname').value = '';
+                        document.getElementById('editGender').value = '';
+                        document.getElementById('editCCCD').value = '';
+                        document.getElementById('editPhone').value = '';
+                        document.getElementById('editPosition').value = '';
+                        document.getElementById('editAddress').value = '';
+                        imageInput.value = ''; // Xóa ảnh đã chọn
                     } else {
                         console.log('Có lỗi trong dữ liệu nhập vào.');
                     }
+                });
+                // Xóa khoảng trắng cccd
+                document.getElementById('editCCCD').addEventListener('input', function () {
+                    this.value = this.value.replace(/^\s+|\s+$/g, '');
+                });
+
+                // Xóa khoảng trắng sdt
+                document.getElementById('editPhone').addEventListener('input', function () {
+                    this.value = this.value.replace(/^\s+|\s+$/g, '');
                 });
             </script>
             <!-- Javascript bắt lỗi thêm -->
@@ -519,18 +527,18 @@
                 document.querySelector('.addEmployee').addEventListener('click', function (e) {
                     // Ngăn form submit nếu có lỗi
                     e.preventDefault();
-        
+
                     // Đặt biến để kiểm tra hợp lệ
                     let isValid = true;
-        
+
                     // Reset các thông báo lỗi trước khi kiểm tra
                     document.querySelectorAll('.error').forEach(function (el) {
                         el.textContent = '';
                     });
-        
+
                     // Biểu thức chính quy để kiểm tra ký tự đặc biệt
                     const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
-        
+
                     // Kiểm tra Họ và Tên
                     const fullname = document.getElementById('fullname').value.trim();
                     if (fullname === '') {
@@ -540,14 +548,14 @@
                         document.getElementById('fullnameError').textContent = 'Họ và Tên không được chứa ký tự đặc biệt';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Giới tính
                     const gender = document.getElementById('gender').value;
                     if (gender === '') {
                         document.getElementById('genderError').textContent = 'Vui lòng chọn giới tính';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Căn cước công dân (CCCD)
                     const cccd = document.getElementById('cccd').value.trim();
                     if (cccd === '') {
@@ -557,7 +565,7 @@
                         document.getElementById('cccdError').textContent = 'Căn cước công dân phải gồm 12 chữ số';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Số điện thoại
                     const phone = document.getElementById('phone').value.trim();
                     if (phone === '') {
@@ -567,14 +575,14 @@
                         document.getElementById('phoneError').textContent = 'Số điện thoại phải gồm 10 chữ số';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Chức vụ
                     const position = document.getElementById('position').value;
                     if (position === '') {
                         document.getElementById('positionError').textContent = 'Vui lòng chọn chức vụ';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Địa chỉ
                     const address = document.getElementById('address').value.trim();
                     if (address === '') {
@@ -584,26 +592,46 @@
                         document.getElementById('addressError').textContent = 'Địa chỉ không được chứa ký tự đặc biệt';
                         isValid = false;
                     }
-        
+
                     // Kiểm tra Ảnh
                     const imageInput = document.getElementById('AddimageInput');
                     if (imageInput.files.length === 0) {
                         document.getElementById('imageError').textContent = 'Vui lòng chọn ảnh';
                         isValid = false;
                     }
-        
+
                     // Nếu tất cả các trường đều hợp lệ, tiếp tục xử lý
                     if (isValid) {
-                        console.log('Dữ liệu hợp lệ. Bạn có thể tiến hành các bước tiếp theo.');
+                        alert("Bạn đã thêm thành công");
+
+                        // Làm sạch các trường nhập liệu
+                        document.getElementById('fullname').value = '';
+                        document.getElementById('gender').value = '';
+                        document.getElementById('cccd').value = '';
+                        document.getElementById('phone').value = '';
+                        document.getElementById('position').value = '';
+                        document.getElementById('address').value = '';
+                        imageInput.value = ''; // Xóa ảnh đã chọn
+
                         // Thực hiện các hành động tiếp theo, ví dụ như gửi form hoặc gọi API
                         // document.getElementById('addForm').submit(); // Nếu có form
                     } else {
                         console.log('Có lỗi trong dữ liệu nhập vào.');
                     }
                 });
-        
+
+                // Xóa khoảng trắng cho các trường
+                document.getElementById('cccd').addEventListener('input', function () {
+                    this.value = this.value.replace(/^\s+|\s+$/g, '');
+                });
+
+                document.getElementById('phone').addEventListener('input', function () {
+                    this.value = this.value.replace(/^\s+|\s+$/g, '');
+                });
+
+
             </script>
-            <script>        
+            <script>
                 // Lắng nghe sự kiện khi modal Chỉnh sửa được mở
                 document.querySelectorAll('.edit-btn').forEach(function (button) {
                     button.addEventListener('click', function () {
@@ -615,7 +643,7 @@
                         document.getElementById('editPosition').value = row.cells[5].innerText; // Chức vụ
                         document.getElementById('editAddress').value = row.cells[6].innerText;
                         document.getElementById('editGender').value = row.cells[3].innerText; // Địa chỉ
-        
+
                     });
                 });
             </script>
