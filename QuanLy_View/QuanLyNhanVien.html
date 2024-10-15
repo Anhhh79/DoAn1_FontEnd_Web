@@ -1,4 +1,4 @@
-<div>
+<div class="main" class="" id="content">
     <nav class="navbar navbar-expand px-4 py-3">
         <div class="navbar-collapse collapse">
             <ul class="navbar-nav justify-content-between" style="width: 1380px;">
@@ -142,11 +142,11 @@
                                     <td>Quản lý</td>
                                     <td>Cần Thơ</td>
                                     <td class="d-flex  justify-content-end">
-                                        <a class="cusor me-2 mt-1"
+                                        <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
                                             style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
                                             tiết</a>
                                         <!-- Modal -->
-                                        <!-- <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
+                                        <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content" style="border-radius: 20px;">
@@ -214,7 +214,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                         <button type="button" class="btn btn-warning me-2 edit-btn"
                                             data-bs-toggle="modal" data-bs-target="#suaModal"
                                             style="font-size: small;">Sửa</button>
@@ -231,7 +231,7 @@
                                     <td>Quản lý</td>
                                     <td>Cần Thơ</td>
                                     <td class="d-flex  justify-content-end">
-                                        <a class="cusor me-2 mt-1"
+                                        <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
                                             style="color: darkblue; font-style: italic; text-decoration: underline;">Chi
                                             tiết</a>
                                         <button type="button" class="btn btn-warning me-2 edit-btn"
@@ -504,15 +504,6 @@
 
     </script>
     <script>
-        // Lắng nghe sự kiện khi modal Chi tiết được mở
-        document.querySelectorAll('.cusor').forEach(function (link) {
-            link.addEventListener('click', function () {
-                const row = this.closest('.row-item');
-                // Lấy thông tin từ các ô trong hàng
-
-            });
-        });
-
         // Lắng nghe sự kiện khi modal Chỉnh sửa được mở
         document.querySelectorAll('.edit-btn').forEach(function (button) {
             button.addEventListener('click', function () {
@@ -528,6 +519,4 @@
             });
         });
     </script>
-
-
 </div>

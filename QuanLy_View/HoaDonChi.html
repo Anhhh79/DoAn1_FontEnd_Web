@@ -28,56 +28,6 @@
                     </div>
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
                         data-bs-dismiss="modal" style="width: 130px; font-size: small;">Lập hóa đơn</button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="border-radius: 20px;">
-                                <div class="modal-header d-flex justify-content-center">
-                                    <div>
-                                        <h5 style="font-weight: bolder;">Lập hóa đơn</h5>
-                                    </div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Tên mặt hàng</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Số lượng</label>
-                                                <input type="number" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Giá</label>
-                                                <input type="text" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="" class="ms-1 mb-1 label-modal">Tổng giá trị: </label>
-                                                <input type="number" class="form-control" placeholder=""
-                                                    aria-label="Username" aria-describedby="addon-wrapping">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- footer -->
-                                <div class="container my-2">
-                                    <div class="row" style="justify-content: flex-end;">
-                                        <div class="col-3 m-2 d-flex justify-content-end">
-                                            <button type="button" class="btn btn-success" style="font-size: small;">Lập hóa đơn</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="row mt-2">
@@ -97,14 +47,14 @@
                             </thead>
                             <tbody>
                                 <tr></tr>
-                                    <th scope="row">1</th>
-                                    <td>HC01</td>
-                                    <td>Nguyễn Văn A</td>
-                                    <td>Ghế</td>
-                                    <td>5</td>
-                                    <td>200.000 VND</td>
-                                    <td>1.000.000 VND</td>
-                                    <td class="text-center">9/10/2024 - 12:14</td>
+                                <th scope="row">1</th>
+                                <td>HC01</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>Ghế</td>
+                                <td>5</td>
+                                <td>200.000 VND</td>
+                                <td>1.000.000 VND</td>
+                                <td class="text-center">9/10/2024 - 12:14</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -113,4 +63,123 @@
             </div>
         </div>
     </main>
+    <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="border-radius: 20px;">
+                <div class="modal-header d-flex justify-content-center">
+                    <div>
+                        <h5 style="font-weight: bolder;">Lập hóa đơn</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="tenMatHang" class="ms-1 mb-1 label-modal">Tên mặt hàng</label>
+                                <input type="text" id="tenMatHang" class="form-control" placeholder=""
+                                    aria-label="Tên mặt hàng" aria-describedby="addon-wrapping">
+                                <span id="errorTenMatHang" class="text-danger"></span> <!-- Thông báo lỗi -->
+                            </div>
+                            <div class="col-6">
+                                <label for="soLuong" class="ms-1 mb-1 label-modal">Số lượng</label>
+                                <input type="number" id="soLuong" class="form-control" placeholder=""
+                                    aria-label="Số lượng" aria-describedby="addon-wrapping">
+                                <span id="errorSoLuong" class="text-danger"></span> <!-- Thông báo lỗi -->
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <label for="gia" class="ms-1 mb-1 label-modal">Giá</label>
+                                <input type="number" id="gia" class="form-control" placeholder="" aria-label="Giá"
+                                    aria-describedby="addon-wrapping">
+                                <span id="errorGia" class="text-danger"></span> <!-- Thông báo lỗi -->
+                            </div>
+                            <div class="col-6">
+                                <label for="tongGiaTri" class="ms-1 mb-1 label-modal">Tổng giá trị:</label>
+                                <input type="text" id="tongGiaTri" class="form-control" placeholder="" readonly
+                                    aria-label="Tổng giá trị" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="container my-2">
+                    <div class="row" style="justify-content: flex-end;">
+                        <div class="col-3 m-2 d-flex justify-content-end">
+                            <button type="button" id="Dongy" class="btn btn-success" style="font-size: small;">Đồng
+                                ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('Dongy').addEventListener('click', function () {
+            // Lấy giá trị từ các trường nhập liệu
+            const tenMatHang = document.getElementById('tenMatHang');
+            const soLuong = document.getElementById('soLuong');
+            const gia = document.getElementById('gia');
+            const tongGiaTri = document.getElementById('tongGiaTri');
+
+            // Xóa thông báo lỗi trước đó (nếu có)
+            document.getElementById('errorTenMatHang').innerText = '';
+            document.getElementById('errorSoLuong').innerText = '';
+            document.getElementById('errorGia').innerText = '';
+
+            let hasError = false; // Biến để kiểm tra có lỗi hay không
+
+            // Biểu thức chính quy để kiểm tra ký tự đặc biệt
+            const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/g;
+
+            // Kiểm tra tên mặt hàng
+            if (tenMatHang.value.trim() === '') {
+                document.getElementById('errorTenMatHang').innerText = 'Vui lòng nhập tên mặt hàng.';
+                hasError = true;
+            } else if (specialCharRegex.test(tenMatHang.value)) {
+                document.getElementById('errorTenMatHang').innerText = 'Tên mặt hàng không được chứa ký tự đặc biệt.';
+                hasError = true;
+            }
+
+            // Kiểm tra số lượng
+            if (isNaN(soLuong.value) || soLuong.value.trim() === '' || Number(soLuong.value) <= 0) {
+                document.getElementById('errorSoLuong').innerText = 'Số lượng phải là một số dương.';
+                hasError = true;
+            }
+
+            // Kiểm tra giá
+            if (isNaN(gia.value) || gia.value.trim() === '' || Number(gia.value) < 0) {
+                document.getElementById('errorGia').innerText = 'Giá phải là một số dương.';
+                hasError = true;
+            } else if (specialCharRegex.test(gia.value)) {
+                document.getElementById('errorGia').innerText = 'Giá không được chứa ký tự đặc biệt.';
+                hasError = true;
+            }
+
+            // Nếu không có lỗi, tính tổng giá trị
+            if (!hasError) {
+                const soLuongValue = Number(soLuong.value);
+                const giaValue = Number(gia.value);
+                const totalValue = soLuongValue * giaValue;
+                tongGiaTri.value = totalValue.toFixed(2); // Cập nhật tổng giá trị
+                console.log('Lập hóa đơn thành công');
+                // Có thể thêm logic để gửi hóa đơn ở đây
+            }
+        });
+
+        // Cập nhật tổng giá trị khi số lượng hoặc giá thay đổi
+        const inputFields = [tenMatHang, soLuong, gia];
+        inputFields.forEach(input => {
+            input.addEventListener('input', function () {
+                const soLuongValue = Number(soLuong.value);
+                const giaValue = Number(gia.value);
+                const totalValue = soLuongValue * giaValue;
+                tongGiaTri.value = totalValue.toFixed(2); // Cập nhật tổng giá trị
+            });
+        });
+
+    </script>
 </div>
