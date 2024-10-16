@@ -9,8 +9,64 @@
                     <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
                         <img src="images/account.png" class="avatar img-fluid" alt="">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end rounded">
-
+                    <div class="dropdown-menu dropdown-menu-end rounded" style="width: 180px;">
+                        <div class="row">
+                            <h4 style="font-weight: 600; font-size: larger;" class="ms-2">Huỳnh Quốc Bảo
+                            </h4>
+                        </div>
+                        <div class="d-flex">
+                            <a class="ms-2 cusor" data-bs-toggle="modal" data-bs-target="#doimk">Đổi mật khẩu</a>
+                            <!-- modal -->
+                            <div class="modal" id="DoiMatKhau" style="z-index: 100;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content p-3 pb-0">
+                                        <!-- Nội dung của modal -->
+                                        <!-- modal headder -->
+                                        <div class="modal-header d-flex justify-content-center">
+                                            <div>
+                                                <h4 style="font-weight: bolder;">Đổi mật khẩu</h4>
+                                            </div>
+                                            <button type="button" class="btn-close"
+                                                onclick="clearDataAssessInput(), clearStarAssess()"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- modal body -->
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="currentPassword" class="form-label">Mật khẩu hiện
+                                                        tại</label>
+                                                    <input type="password" class="form-control" id="currentPassword"
+                                                        placeholder="Nhập mật khẩu hiện tại" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="newPassword" class="form-label">Mật khẩu mới</label>
+                                                    <input type="password" class="form-control" id="newPassword"
+                                                        placeholder="Nhập mật khẩu mới" required>
+                                                    <div id="passwordHelpBlock" class="form-text">
+                                                        Mật khẩu phải có ít nhất 8 ký tự.
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="confirmNewPassword" class="form-label">Xác nhận mật khẩu
+                                                        mới</label>
+                                                    <input type="password" class="form-control" id="confirmNewPassword"
+                                                        placeholder="Nhập lại mật khẩu mới" required>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- modal footer -->
+                                        <div class="modal-footer">
+                                            <a href="#" class="btn btn-warning text-light" aria-label="Close">Đổi mật
+                                                khẩu</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
+                        </div>
                     </div>
                 </li>
             </ul>

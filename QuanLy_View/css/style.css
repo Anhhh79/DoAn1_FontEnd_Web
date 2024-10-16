@@ -187,3 +187,15 @@ a.sidebar-link:hover {
     cursor: pointer;
 }
 @media (min-width: 768px) {}
+
+/* Ẩn spinners trên tất cả các trình duyệt */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Ẩn spinners trên Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
