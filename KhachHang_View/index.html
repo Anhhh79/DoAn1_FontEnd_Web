@@ -1028,14 +1028,13 @@
                     <div class="input-group mb-3" style="width: 600;">
                         <input id="SoDienThoaiTraCuu" type="text" class="form-control" placeholder="Nhập số điện thoại"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <a class="btn btn-Secondary text-center" onclick="clearPhoneNumber()" data-bs-toggle="modal"
-                            data-bs-target="#OTP"><i class="fa-solid fa-magnifying-glass pt-1"></i></i></a>
+                        <a class="btn btn-Secondary text-center" onclick="validatePhoneNumber(), clearPhoneNumber()" id="btnTraCuu"><i class="fa-solid fa-magnifying-glass pt-1"></i></i></a>
                     </div>
                 </div>
 
             </div>
             <!-- modal OTP -->
-            <div class="modal fade" id="OTP" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true"
+            <div class="modal fade" id="OTPTraCuu" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true"
                 onclick="clearOtpInputs()">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content" style="border-radius: 20px;">
@@ -1052,16 +1051,16 @@
                                         <div class="card-body text-center">
                                             <h4>Xác Nhận OTP</h4>
                                             <p>Mã OTP sẽ được gửi qua số điện thoại của bạn</p>
-                                            <div class="otp-field mb-4">
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
-                                                <input type="number" maxlength="1" />
+                                            <div class="otp-field mb-2">
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
+                                                <input type="number" maxlength="1" class="otp-input" />
                                             </div>
-                                            <a class="btn btn-warning text-light mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#LichSu" data-bs-dismiss="modal" aria-label="Close">Xác
+                                            <div id="otpError" class="text-danger pb-2"></div>
+                                            <a class="btn btn-warning text-light mb-3" onclick="checkOTPTraCuu()">Xác
                                                 Nhận</a>
                                             <p class="resend text-muted mb-0">Didn't receive code? <a href=""
                                                     class="text-warning">Request
@@ -1078,7 +1077,7 @@
         </div>
 
         <!-- modal hien thi lich su dat phong -->
-        <div class="modal fade" id="Lichsu" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true">
+        <div class="modal fade" id="LichSuDatPhong" tabindex="-1" aria-labelledby="Lichsu" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content" style="border-radius: 20px;">
                     <!-- header -->
@@ -1325,12 +1324,14 @@
                             <label for="fullNameAssess" class="form-label">Họ Và Tên</label>
                             <input type="text" id="fullNameAssess" class="form-control Assess"
                                 placeholder="Nhập họ tên của bạn" aria-label="Full name" required>
+                                <div id="fullNameError" class="text-danger" style="font-size: 0.875rem;"></div>
                         </div>
                         <div class="mb-3">
                             <label for="PhoneNumberAssess" class="form-label">Số Điện Thoại</label>
                             <input type="tel" class="form-control Assess" id="PhoneNumberAssess"
                                 aria-describedby="phoneNumber" placeholder="Nhập số điện thoại đã đặt phòng"
                                 pattern="[0-9]{10}" title="Số điện thoại gồm 10 chữ số" required>
+                                <div id="phoneNumberError" class="text-danger" style="font-size: 0.875rem;"></div>
                         </div>
                         <!-- <div class="mb-3">
                             <label for="ContentAssess" class="form-label">Nội Dung Đánh Giá</label>
@@ -1350,12 +1351,12 @@
                             <input type="radio" class="star" id="star1" name="rating" value="1" />
                             <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
                         </div>
+                        <div id="starRatingError" class="text-danger" style="font-size: 0.875rem;"></div>
                     </div>
                     <!-- modal footer -->
                     <div class="modal-footer">
-                        <a href="#" class="btn btn-warning text-light"
-                            onclick="clearDataAssessInput(), clearStarAssess()" data-bs-dismiss="modal"
-                            aria-label="Close">Gửi Đánh Giá</a>
+                        <a class="btn btn-warning text-light"
+                            onclick="validateAssessmentForm()">Gửi Đánh Giá</a>
                     </div>
                 </div>
             </div>

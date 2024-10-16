@@ -103,7 +103,189 @@ git<html>
             </div>
         </div>
         <div class="main" class="" id="content">
-
+            <div class="wrapper">
+                <div class="main" id="content">
+                    <nav class="navbar navbar-expand px-4 py-3">
+                        <div class="navbar-collapse collapse">
+                            <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                                <li>
+                                    <h2 style="font-weight: bolder;">Danh sách phòng</h2>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                        <img src="images/account.png" class="avatar img-fluid" alt="">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end rounded">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <main class="content px-3 py-3">
+                        <div class="container-fluid">
+                            <div>
+                                <div class="input-group d-flex align-items-center border border-dark rounded"
+                                    style="width: 300px;padding: 0;">
+                                    <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                                    <input type="text" class="form-control input-border" placeholder="Thông tin phòng"
+                                        aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-12">
+                                        <table class="table">
+                                            <thead style="background: #0e2238;">
+                                                <tr>
+                                                    <th scope="col">STT</th>
+                                                    <th scope="col">Mã hạng phòng</th>
+                                                    <th scope="col">Tên Hạng Phòng</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Giá Phòng</th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Trạng thái</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td class="me-2">HP01</td>
+                                                    <td>Deluxe</td>
+                                                    <td></td>
+                                                    <td>200k/h</td>
+                                                    <td></td>
+                                                    <td class="text-secondary">Trống</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td class="me-2">HP02</td>
+                                                    <td>Superior</td>
+                                                    <td></td>
+                                                    <td>300k/h</td>
+                                                    <td></td>
+                                                    <td class="text-warning">Đã đặt</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-warning btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td class="me-2">HP03</td>
+                                                    <td>Standard</td>
+                                                    <td></td>
+                                                    <td>100k/h</td>
+                                                    <td></td>
+                                                    <td class="text-secondary">Trống</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td class="me-2">HP04</td>
+                                                    <td>Executive</td>
+                                                    <td></td>
+                                                    <td>500k/h</td>
+                                                    <td></td>
+                                                    <td class="text-success">Đang hoạt động</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td class="me-2">HP05</td>
+                                                    <td>Presidential</td>
+                                                    <td></td>
+                                                    <td>1000k/h</td>
+                                                    <td></td>
+                                                    <td class="text-secondary">Trống</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td class="me-2">HP06</td>
+                                                    <td>Deluxe</td>
+                                                    <td></td>
+                                                    <td>200k/h</td>
+                                                    <td></td>
+                                                    <td class="text-warning">Đã đặt</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-warning btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td class="me-2">HP07</td>
+                                                    <td>Standard</td>
+                                                    <td></td>
+                                                    <td>100k/h</td>
+                                                    <td></td>
+                                                    <td class="text-secondary">Trống</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td class="me-2">HP08</td>
+                                                    <td>Superior</td>
+                                                    <td></td>
+                                                    <td>300k/h</td>
+                                                    <td></td>
+                                                    <td class="text-success">Đang hoạt động</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">9</th>
+                                                    <td class="me-2">HP09</td>
+                                                    <td>Executive</td>
+                                                    <td></td>
+                                                    <td>500k/h</td>
+                                                    <td></td>
+                                                    <td class="text-secondary">Trống</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">10</th>
+                                                    <td class="me-2">HP10</td>
+                                                    <td>Presidential</td>
+                                                    <td></td>
+                                                    <td>1000k/h</td>
+                                                    <td></td>
+                                                    <td class="text-warning">Đã đặt</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-warning btn-sm"
+                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+        
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
