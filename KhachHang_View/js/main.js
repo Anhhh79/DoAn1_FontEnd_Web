@@ -127,49 +127,58 @@ function validateAssessmentForm() {
     phoneNumberError.textContent = '';
     starRatingError.textContent = '';
 
+    // Biến cờ để theo dõi trạng thái hợp lệ của form
+    let isValid = true;
+
     // Kiểm tra xem họ tên đã được nhập chưa
     if (fullName === "") {
         fullNameError.textContent = "Vui lòng nhập họ tên của bạn.";
-        return false;
+        isValid = false;
     }
 
     // Kiểm tra xem số điện thoại đã được nhập và hợp lệ chưa
     if (phoneNumber === "" || !phoneRegex.test(phoneNumber)) {
         phoneNumberError.textContent = "Vui lòng nhập số điện thoại hợp lệ (10 chữ số).";
-        return false;
+        isValid = false;
     }
 
     // Kiểm tra xem người dùng có chọn số sao hay chưa
     if (!starRating) {
         starRatingError.textContent = "Vui lòng chọn số sao để đánh giá khách sạn.";
+        isValid = false;
+    }
+
+    // Nếu có lỗi, không tiếp tục thực hiện
+    if (!isValid) {
         return false;
     }
 
-    // Ẩn modal hiện tại
+    // Ẩn modal hiện tại nếu không có lỗi
     const currentModal1 = bootstrap.Modal.getInstance(document.getElementById('modalDanhGia'));
     if (currentModal1) {
         currentModal1.hide(); // Ẩn modal hiện tại
     }
 
     // Nếu tất cả các trường hợp đều hợp lệ
-    alert("Đã gửi đánh giá của bạn !");
+    alert("Đã gửi đánh giá của bạn!");
     clearDataAssessInput();
     clearStarAssess();
     return true;
 }
 
+
 // Thêm sự kiện focus để ẩn thông báo lỗi khi nhấp vào ô nhập
-document.getElementById('fullNameAssess').addEventListener('focus', function() {
+document.getElementById('fullNameAssess').addEventListener('focus', function () {
     document.getElementById('fullNameError').textContent = '';
 });
 
-document.getElementById('PhoneNumberAssess').addEventListener('focus', function() {
+document.getElementById('PhoneNumberAssess').addEventListener('focus', function () {
     document.getElementById('phoneNumberError').textContent = '';
 });
 
 const starInputs = document.querySelectorAll('input[name="rating"]');
-starInputs.forEach(function(input) {
-    input.addEventListener('change', function() {
+starInputs.forEach(function (input) {
+    input.addEventListener('change', function () {
         document.getElementById('starRatingError').textContent = '';
     });
 });
@@ -193,49 +202,71 @@ function CheckDataFormThanhToan() {
     document.getElementById('emailErrorTT').textContent = '';
     document.getElementById('checkboxErrorTT').textContent = '';
 
+    // Biến cờ để theo dõi xem có lỗi nào không
+    let isValid = true;
+
     // Kiểm tra họ tên
     if (fullName === "") {
         document.getElementById('fullNameErrorTT').textContent = "Vui lòng nhập họ tên của bạn.";
-        return false;
+        isValid = false;
     }
 
     // Kiểm tra số CCCD (12 chữ số)
     const cccdRegex = /^[0-9]{12}$/;
     if (!cccdRegex.test(cccd)) {
         document.getElementById('cccdErrorTT').textContent = "Vui lòng nhập số CCCD gồm 12 chữ số.";
-        return false;
+        isValid = false;
     }
 
     // Kiểm tra số điện thoại (10 chữ số)
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phoneNumber)) {
         document.getElementById('phoneNumberErrorTT').textContent = "Vui lòng nhập số điện thoại gồm 10 chữ số.";
-        return false;
-    } else {
-        if (!(phoneNumber2 == phoneNumber)) {
-            document.getElementById('phoneNumber2ErrorTT').textContent = "Số điện thoại nhập lại không đúng";
-            return false;
-        }
+        isValid = false;
+    } else if (phoneNumber2 !== phoneNumber) {
+        document.getElementById('phoneNumber2ErrorTT').textContent = "Số điện thoại nhập lại không đúng.";
+        isValid = false;
+    }
+    if (!phoneRegex.test(phoneNumber2)) {
+        document.getElementById('phoneNumber2ErrorTT').textContent = "Vui lòng nhập số điện thoại gồm 10 chữ số.";
+        isValid = false;
     }
 
     // Kiểm tra địa chỉ email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         document.getElementById('emailErrorTT').textContent = "Vui lòng nhập địa chỉ email đúng định dạng.";
-        return false;
+        isValid = false;
     }
 
     // Kiểm tra nếu checkbox đã được chọn
     if (!checkbox.checked) {
         document.getElementById('checkboxErrorTT').textContent = "Bạn cần đồng ý với điều khoản đặt phòng trước khi tiếp tục.";
-        return false;
-    } 
+        isValid = false;
+    }
 
+    if (!isValid) {
+        return false;
+    }
     // Nếu tất cả các thông tin đều hợp lệ
+
     alert("Tất cả thông tin đều hợp lệ.");
     return true;
+
 }
+//không cho đóng modal khi nhấn nhầm bên ngoài modal Lịch sử đặt phòng
+$(document).ready(function () {
+    // Khi modal mở ra
+    $('#LichSuDatPhong').on('show.bs.modal', function (e) {
+        // Ngăn modal đóng khi nhấn vào bên ngoài
+        $(this).attr('data-bs-backdrop', 'static');
+        $(this).attr('data-bs-keyboard', 'false');
+    });
 
-
-
-
+    // Ngăn modal đóng khi nhấn vào modal
+    $('#LichSuDatPhong').on('click', function (e) {
+        if ($(e.target).is(this)) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định
+        }
+    });
+});
