@@ -17,7 +17,7 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <!-- Css -->
+    <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -56,294 +56,331 @@
                 <a href="#" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Đổi mật khẩu</span>
-                    <div class="modal fade" id="doimk">
-                        <div class="modal-dialog">
-                            <div class="modal-content p-3 pb-0">
-                                <!-- Nội dung của modal -->
-                                <!-- modal headder -->
-                                <div class="modal-header d-flex justify-content-center">
-                                    <div>
-                                        <h4 style="font-weight: bolder;">Đổi mật khẩu</h4>
-                                    </div>
-                                    <button type="button" class="btn-close" onclick="clearDataAssessInput(), clearStarAssess()"
-                                        data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <!-- modal body -->
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="currentPassword" class="form-label">Mật khẩu hiện tại</label>
-                                            <input type="password" class="form-control" id="currentPassword"
-                                                placeholder="Nhập mật khẩu hiện tại" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="newPassword" class="form-label" >Mật khẩu mới</label>
-                                            <input type="password" class="form-control" id="newPassword" placeholder="Nhập mật khẩu mới"
-                                                required>
-                                            <div id="passwordHelpBlock" class="form-text">
-                                                Mật khẩu phải có ít nhất 8 ký tự.
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="confirmNewPassword" class="form-label">Xác nhận mật khẩu mới</label>
-                                            <input type="password" class="form-control" id="confirmNewPassword"
-                                                placeholder="Nhập lại mật khẩu mới" required>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- modal footer -->
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-warning text-light" aria-label="Close">Đổi mật khẩu</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </a>
             </div>
-            <!-- modal -->
-            <div class="modal" id="DoiMatKhau" style="z-index: 100;">
+        </div>
+        <div class="main" id="content">
+            <nav class="navbar navbar-expand px-4 py-3">
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                        <li>
+                            <h2 style="font-weight: bolder;">Danh sách phòng</h2>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="images/account.png" class="avatar img-fluid" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end rounded" style="width: 180px;">
+                                <div class="row">
+                                    <h4 style="font-weight: 600; font-size: larger;" class="ms-2">Huỳnh Quốc Bảo
+                                    </h4>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="ms-2 cusor" data-bs-toggle="modal" data-bs-target="#doimk">Đổi mật
+                                        khẩu</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-3">
+                <div class="container-fluid">
+                    <div>
+                        <div class="input-group d-flex align-items-center border border-dark rounded"
+                            style="width: 300px;padding: 0;">
+                            <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                            <input type="text" class="form-control input-border" placeholder="Thông tin phòng"
+                                aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <table class="table">
+                                    <thead style="background: #0e2238;">
+                                        <tr>
+                                            <th scope="col">STT</th>
+                                            <th scope="col">Mã hạng phòng</th>
+                                            <th scope="col">Tên Hạng Phòng</th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Giá Phòng</th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Trạng thái</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td class="me-2">HP01</td>
+                                            <td>Deluxe</td>
+                                            <td></td>
+                                            <td>200k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td class="me-2">HP02</td>
+                                            <td>Superior</td>
+                                            <td></td>
+                                            <td>300k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td class="me-2">HP03</td>
+                                            <td>Standard</td>
+                                            <td></td>
+                                            <td>100k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td class="me-2">HP04</td>
+                                            <td>Executive</td>
+                                            <td></td>
+                                            <td>500k/h</td>
+                                            <td></td>
+                                            <td class="text-success">Đang hoạt động</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td class="me-2">HP05</td>
+                                            <td>Presidential</td>
+                                            <td></td>
+                                            <td>1000k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td class="me-2">HP06</td>
+                                            <td>Deluxe</td>
+                                            <td></td>
+                                            <td>200k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td class="me-2">HP07</td>
+                                            <td>Standard</td>
+                                            <td></td>
+                                            <td>100k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td class="me-2">HP08</td>
+                                            <td>Superior</td>
+                                            <td></td>
+                                            <td>300k/h</td>
+                                            <td></td>
+                                            <td class="text-success">Đang hoạt động</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td class="me-2">HP09</td>
+                                            <td>Executive</td>
+                                            <td></td>
+                                            <td>500k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td class="me-2">HP10</td>
+                                            <td>Presidential</td>
+                                            <td></td>
+                                            <td>1000k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
+                                                    phòng</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            
+            <!-- Modal doi mk -->
+            <div class="modal fade" id="doimk" tabindex="-1" aria-labelledby="moimk" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content p-3 pb-0">
-                        <!-- Nội dung của modal -->
-                        <!-- modal headder -->
+                    <div class="modal-content" style="border-radius: 20px;">
                         <div class="modal-header d-flex justify-content-center">
                             <div>
-                                <h4 style="font-weight: bolder;">Đổi mật khẩu</h4>
+                                <h5 style="font-weight: bolder;">Đổi mật khẩu</h5>
                             </div>
-                            <button type="button" class="btn-close" onclick="clearDataAssessInput(), clearStarAssess()"
-                                data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- modal body -->
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="currentPassword" class="form-label">Mật khẩu hiện tại</label>
-                                    <input type="password" class="form-control" id="currentPassword"
-                                        placeholder="Nhập mật khẩu hiện tại" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="newPassword" class="form-label" >Mật khẩu mới</label>
-                                    <input type="password" class="form-control" id="newPassword" placeholder="Nhập mật khẩu mới"
-                                        required>
-                                    <div id="passwordHelpBlock" class="form-text">
-                                        Mật khẩu phải có ít nhất 8 ký tự.
+                        <div class="modal-body" id="modalContent">
+                            <div class="container px-5">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="fullname" class="ms-1 mb-1 label-modal">Mật khẩu hiện tại</label>
+                                        <input type="password" class="form-control" id="mkHienTai" placeholder=""
+                                            required>
+                                        <span id="mkHienTaiError" class="error text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="confirmNewPassword" class="form-label">Xác nhận mật khẩu mới</label>
-                                    <input type="password" class="form-control" id="confirmNewPassword"
-                                        placeholder="Nhập lại mật khẩu mới" required>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <label for="cccd" class="ms-1 mb-1 label-modal">Mật khẩu mới</label>
+                                        <input class="form-control" type="password" id="mkMoi" placeholder="" required>
+                                        <span id="mkMoiError" type="password" class="error text-danger"></span>
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <label for="address" class="ms-1 mb-1 label-modal">Nhập lại mật khẩu mới</label>
+                                        <input type="text" class="form-control" id="mkMoi1" placeholder="" required>
+                                        <span id="mkMoi1Error" class="error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- modal footer -->
-                        <div class="modal-footer">
-                            <a href="#" class="btn btn-warning text-light" aria-label="Close">Đổi mật khẩu</a>
+                        <!-- footer -->
+                        <div class="container my-2">
+                            <div class="row" style="justify-content: flex-end;">
+                                <div class="col-3 m-2 d-flex justify-content-end" style="width: 200px;">
+                                    <button type="button" class="btn btn-warning" id="doimatkhau"
+                                        style="font-size: medium; color: white;">Đổi mật khẩu</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main" class="" id="content">
-            <div class="wrapper">
-                <div class="main" id="content">
-                    <nav class="navbar navbar-expand px-4 py-3">
-                        <div class="navbar-collapse collapse">
-                            <ul class="navbar-nav justify-content-between" style="width: 1380px;">
-                                <li>
-                                    <h2 style="font-weight: bolder;">Danh sách phòng</h2>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                        <img src="images/account.png" class="avatar img-fluid" alt="">
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end rounded" style="width: 180px;">
-                                        <div class="row">
-                                            <h4 style="font-weight: 600; font-size: larger;" class="ms-2">Huỳnh Quốc Bảo
-                                            </h4>
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="ms-2 cusor" data-bs-toggle="modal"
-                                            data-bs-target="#doimk">Đổi mật khẩu</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <main class="content px-3 py-3">
-                        <div class="container-fluid">
-                            <div>
-                                <div class="input-group d-flex align-items-center border border-dark rounded"
-                                    style="width: 300px;padding: 0;">
-                                    <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
-                                    <input type="text" class="form-control input-border" placeholder="Thông tin phòng"
-                                        aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-12">
-                                        <table class="table">
-                                            <thead style="background: #0e2238;">
-                                                <tr>
-                                                    <th scope="col">STT</th>
-                                                    <th scope="col">Mã hạng phòng</th>
-                                                    <th scope="col">Tên Hạng Phòng</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col">Giá Phòng</th>
-                                                    <th scope="col"></th>
-                                                    <th scope="col">Trạng thái</th>
-                                                    <th scope="col"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td class="me-2">HP01</td>
-                                                    <td>Deluxe</td>
-                                                    <td></td>
-                                                    <td>200k/h</td>
-                                                    <td></td>
-                                                    <td class="text-secondary">Trống</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td class="me-2">HP02</td>
-                                                    <td>Superior</td>
-                                                    <td></td>
-                                                    <td>300k/h</td>
-                                                    <td></td>
-                                                    <td class="text-warning">Đã đặt</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-warning btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td class="me-2">HP03</td>
-                                                    <td>Standard</td>
-                                                    <td></td>
-                                                    <td>100k/h</td>
-                                                    <td></td>
-                                                    <td class="text-secondary">Trống</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td class="me-2">HP04</td>
-                                                    <td>Executive</td>
-                                                    <td></td>
-                                                    <td>500k/h</td>
-                                                    <td></td>
-                                                    <td class="text-success">Đang hoạt động</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-success btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td class="me-2">HP05</td>
-                                                    <td>Presidential</td>
-                                                    <td></td>
-                                                    <td>1000k/h</td>
-                                                    <td></td>
-                                                    <td class="text-secondary">Trống</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">6</th>
-                                                    <td class="me-2">HP06</td>
-                                                    <td>Deluxe</td>
-                                                    <td></td>
-                                                    <td>200k/h</td>
-                                                    <td></td>
-                                                    <td class="text-warning">Đã đặt</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-warning btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">7</th>
-                                                    <td class="me-2">HP07</td>
-                                                    <td>Standard</td>
-                                                    <td></td>
-                                                    <td>100k/h</td>
-                                                    <td></td>
-                                                    <td class="text-secondary">Trống</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">8</th>
-                                                    <td class="me-2">HP08</td>
-                                                    <td>Superior</td>
-                                                    <td></td>
-                                                    <td>300k/h</td>
-                                                    <td></td>
-                                                    <td class="text-success">Đang hoạt động</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-success btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">9</th>
-                                                    <td class="me-2">HP09</td>
-                                                    <td>Executive</td>
-                                                    <td></td>
-                                                    <td>500k/h</td>
-                                                    <td></td>
-                                                    <td class="text-secondary">Trống</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">10</th>
-                                                    <td class="me-2">HP10</td>
-                                                    <td>Presidential</td>
-                                                    <td></td>
-                                                    <td>1000k/h</td>
-                                                    <td></td>
-                                                    <td class="text-warning">Đã đặt</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-warning btn-sm"
-                                                            data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-        
-            </div>
+
+            <!-- javascrit bắt lỗi đổi mk -->
+            <script>
+                // Loại bỏ khoảng trắng trong khi người dùng nhập vào các ô mật khẩu
+                document.getElementById('mkHienTai').addEventListener('input', function () {
+                    this.value = this.value.replace(/\s/g, '');
+                });
+
+                document.getElementById('mkMoi').addEventListener('input', function () {
+                    this.value = this.value.replace(/\s/g, '');
+                });
+
+                document.getElementById('mkMoi1').addEventListener('input', function () {
+                    this.value = this.value.replace(/\s/g, '');
+                });
+
+                document.getElementById('doimatkhau').addEventListener('click', function () {
+                    // Lấy giá trị của các ô input
+                    const mkHienTai = document.getElementById('mkHienTai').value.trim();
+                    const mkMoi = document.getElementById('mkMoi').value.trim();
+                    const mkMoi1 = document.getElementById('mkMoi1').value.trim();
+
+                    // Xóa thông báo lỗi trước đó
+                    document.getElementById('mkHienTaiError').textContent = '';
+                    document.getElementById('mkMoiError').textContent = '';
+                    document.getElementById('mkMoi1Error').textContent = '';
+
+                    let isValid = true;
+
+                    // Kiểm tra mật khẩu hiện tại
+                    if (!mkHienTai) {
+                        document.getElementById('mkHienTaiError').textContent = 'Vui lòng nhập mật khẩu hiện tại';
+                        isValid = false;
+                    }
+
+                    // Kiểm tra mật khẩu mới
+                    if (!mkMoi) {
+                        document.getElementById('mkMoiError').textContent = 'Vui lòng nhập mật khẩu mới';
+                        isValid = false;
+                    } else if (mkMoi.length < 6) {
+                        document.getElementById('mkMoiError').textContent = 'Mật khẩu mới phải có ít nhất 6 ký tự';
+                        isValid = false;
+                    }
+
+                    // Kiểm tra nhập lại mật khẩu mới
+                    if (!mkMoi1) {
+                        document.getElementById('mkMoi1Error').textContent = 'Vui lòng nhập lại mật khẩu mới';
+                        isValid = false;
+                    } else if (mkMoi !== mkMoi1) {
+                        document.getElementById('mkMoi1Error').textContent = 'Mật khẩu nhập lại không khớp';
+                        isValid = false;
+                    }
+
+                    // Nếu không có lỗi, thực hiện các bước tiếp theo (ví dụ: gửi dữ liệu đến server)
+                    if (isValid) {
+                        // Thực hiện xử lý đổi mật khẩu tại đây
+                        alert('Đổi mật khẩu thành công!');
+                        document.getElementById('mkHienTai').value = '';
+                        document.getElementById('mkMoi').value = '';
+                        document.getElementById('mkMoi1').value = '';
+                    }
+                });
+
+            </script>
         </div>
     </div>
+
+    <!-- javascipt boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <!-- file javascript -->
     <script src="js/script.js"></script>
 </body>
 
