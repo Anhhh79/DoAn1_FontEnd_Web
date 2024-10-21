@@ -254,7 +254,8 @@ function CheckDataFormThanhToan() {
     return true;
 
 }
-//ngăn đóng modal khi nhấn vào bên ngoài
+
+//ngan dong modal
 $(document).ready(function () {
     // Khi modal mở ra
     $('#LichSuDatPhong').on('show.bs.modal', function (e) {
@@ -262,7 +263,6 @@ $(document).ready(function () {
         $(this).attr('data-bs-backdrop', 'static');
         $(this).attr('data-bs-keyboard', 'false');
     });
-
     // Ngăn modal đóng khi nhấn vào modal
     $('#LichSuDatPhong').on('click', function (e) {
         if ($(e.target).is(this)) {
@@ -270,4 +270,5 @@ $(document).ready(function () {
         }
     });
 });
+
 
