@@ -254,7 +254,7 @@ function CheckDataFormThanhToan() {
     return true;
 
 }
-//không cho đóng modal khi nhấn nhầm bên ngoài modal Lịch sử đặt phòng
+//ngăn đóng modal khi nhấn vào bên ngoài
 $(document).ready(function () {
     // Khi modal mở ra
     $('#LichSuDatPhong').on('show.bs.modal', function (e) {
@@ -270,3 +270,4 @@ $(document).ready(function () {
         }
     });
 });
+
