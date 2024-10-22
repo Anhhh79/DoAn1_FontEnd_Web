@@ -16,53 +16,6 @@
                         </div>
                         <div class="d-flex">
                             <a class="ms-2 cusor" data-bs-toggle="modal" data-bs-target="#doimk">Đổi mật khẩu</a>
-                            <!-- modal -->
-                            <div class="modal" id="DoiMatKhau" style="z-index: 100;">
-                                <div class="modal-dialog">
-                                    <div class="modal-content p-3 pb-0">
-                                        <!-- Nội dung của modal -->
-                                        <!-- modal headder -->
-                                        <div class="modal-header d-flex justify-content-center">
-                                            <div>
-                                                <h4 style="font-weight: bolder;">Đổi mật khẩu</h4>
-                                            </div>
-                                            <button type="button" class="btn-close"
-                                                onclick="clearDataAssessInput(), clearStarAssess()"
-                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <!-- modal body -->
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="currentPassword" class="form-label">Mật khẩu hiện
-                                                        tại</label>
-                                                    <input type="password" class="form-control" id="currentPassword"
-                                                        placeholder="Nhập mật khẩu hiện tại" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="newPassword" class="form-label">Mật khẩu mới</label>
-                                                    <input type="password" class="form-control" id="newPassword"
-                                                        placeholder="Nhập mật khẩu mới" required>
-                                                    <div id="passwordHelpBlock" class="form-text">
-                                                        Mật khẩu phải có ít nhất 8 ký tự.
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="confirmNewPassword" class="form-label">Xác nhận mật khẩu
-                                                        mới</label>
-                                                    <input type="password" class="form-control" id="confirmNewPassword"
-                                                        placeholder="Nhập lại mật khẩu mới" required>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <!-- modal footer -->
-                                        <div class="modal-footer">
-                                            <a href="#" class="btn btn-warning text-light" aria-label="Close">Đổi mật
-                                                khẩu</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="d-flex">
                             <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
@@ -169,7 +122,7 @@
                                                                             </div>
                                                                             <div class="col-4">
                                                                                 <h6><span style="font-weight: 600;">Tổng
-                                                                                        số phòng: </span> 2 </h6>
+                                                                                        số ngày: </span> 2 </h6>
                                                                             </div>
                                                                             <div class="col-4">
                                                                                 <h6><span style="font-weight: 600;">Hạng
@@ -432,191 +385,211 @@
                                                                                         phòng: </span> VIP </h6>
                                                                             </div>
 
-                                                                        </div>
-                                                                        <div class="row mt-2">
-                                                                            <div class="col-4 dropdown">
-                                                                                <h6 class="dropdown-toggle cusor"
-                                                                                    id="dropdownMenuButton1"
-                                                                                    data-bs-toggle="dropdown"
-                                                                                    aria-expanded="false">
-                                                                                    <span style="font-weight: 600;">
-                                                                                        Chọn phòng: </span>
-                                                                                </h6>
-                                                                                <div class="dropdown-menu"
-                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                    <div
-                                                                                        class="dropdown-item scroll-content">
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P01
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P02
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P03
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P04
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P05
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P06
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P01
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P07
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P08
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                        <div class="row">
-                                                                                            <div class="col-6">
-                                                                                                P09
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-6 d-flex justify-content-end">
-                                                                                                <input type="checkbox"
-                                                                                                    name="checkboxGroup"
-                                                                                                    style="transform: scale(1.4);"
-                                                                                                    class="cusor"
-                                                                                                    value="P01">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-4 ">
-                                                                                <h6><span style="font-weight: 600;">
-                                                                                        Yêu cầu: </span>Sạch sẽ
-                                                                                </h6>
-                                                                            </div>
-                                                                            <div class="col-4 ">
-                                                                                <h6><span style="font-weight: 600;">
-                                                                                        Thanh toán: </span> 900000 VND
-                                                                                </h6>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-4 dropdown">
+                                            <h6 class="dropdown-toggle cusor" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span style="font-weight: 600;">
+                                                    Chọn phòng: </span>
+                                            </h6>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <div class="dropdown-item scroll-content">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P01
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
                                                         </div>
                                                     </div>
-                                                    <div class="container my-2 d-flex justify-content-end">
-                                                        <button type="button" class="btn btn-success">Hoàn tất</button>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P02
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P03
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P04
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P05
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P06
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P01
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P07
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P08
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            P09
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <input type="checkbox" name="checkboxGroup"
+                                                                style="transform: scale(1.4);" class="cusor"
+                                                                value="P01">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        <div class="col-4 ">
+                                            <h6><span style="font-weight: 600;">
+                                                    Yêu cầu: </span>Sạch sẽ
+                                            </h6>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <h6><span style="font-weight: 600;">
+                                                    Thanh toán: </span> 900000 VND
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="container my-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-success">Hoàn tất</button>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+
+     <!-- javascrit bắt lỗi đổi mk -->
+     <script>
+        // Loại bỏ khoảng trắng trong khi người dùng nhập vào các ô mật khẩu
+        document.getElementById('mkHienTai').addEventListener('input', function () {
+            this.value = this.value.replace(/\s/g, '');
+        });
+
+        document.getElementById('mkMoi').addEventListener('input', function () {
+            this.value = this.value.replace(/\s/g, '');
+        });
+
+        document.getElementById('mkMoi1').addEventListener('input', function () {
+            this.value = this.value.replace(/\s/g, '');
+        });
+
+        document.getElementById('doimatkhau').addEventListener('click', function () {
+            // Lấy giá trị của các ô input
+            const mkHienTai = document.getElementById('mkHienTai').value.trim();
+            const mkMoi = document.getElementById('mkMoi').value.trim();
+            const mkMoi1 = document.getElementById('mkMoi1').value.trim();
+
+            // Xóa thông báo lỗi trước đó
+            document.getElementById('mkHienTaiError').textContent = '';
+            document.getElementById('mkMoiError').textContent = '';
+            document.getElementById('mkMoi1Error').textContent = '';
+
+            let isValid = true;
+
+            // Kiểm tra mật khẩu hiện tại
+            if (!mkHienTai) {
+                document.getElementById('mkHienTaiError').textContent = 'Vui lòng nhập mật khẩu hiện tại';
+                isValid = false;
+            }
+
+            // Kiểm tra mật khẩu mới
+            if (!mkMoi) {
+                document.getElementById('mkMoiError').textContent = 'Vui lòng nhập mật khẩu mới';
+                isValid = false;
+            } else if (mkMoi.length < 6) {
+                document.getElementById('mkMoiError').textContent = 'Mật khẩu mới phải có ít nhất 6 ký tự';
+                isValid = false;
+            }
+
+            // Kiểm tra nhập lại mật khẩu mới
+            if (!mkMoi1) {
+                document.getElementById('mkMoi1Error').textContent = 'Vui lòng nhập lại mật khẩu mới';
+                isValid = false;
+            } else if (mkMoi !== mkMoi1) {
+                document.getElementById('mkMoi1Error').textContent = 'Mật khẩu nhập lại không khớp';
+                isValid = false;
+            }
+
+            // Nếu không có lỗi, thực hiện các bước tiếp theo (ví dụ: gửi dữ liệu đến server)
+            if (isValid) {
+                // Thực hiện xử lý đổi mật khẩu tại đây
+                alert('Đổi mật khẩu thành công!');
+                document.getElementById('mkHienTai').value = '';
+                document.getElementById('mkMoi').value = '';
+                document.getElementById('mkMoi1').value = '';
+            }
+        });
+    </script>
 </div>
