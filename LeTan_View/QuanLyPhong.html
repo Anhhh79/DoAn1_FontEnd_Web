@@ -1,204 +1,235 @@
-<div class="main" id="content">
-    <nav class="navbar navbar-expand px-4 py-3">
-        <div class="navbar-collapse collapse">
-            <ul class="navbar-nav justify-content-between" style="width: 1380px;">
-                <li>
-                    <h2 style="font-weight: bolder;">Danh sách phòng</h2>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                        <img src="images/account.png" class="avatar img-fluid" alt="">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end rounded" style="width: 180px;">
-                        <div class="row">
-                            <h4 style="font-weight: 600; font-size: larger;" class="ms-2">Huỳnh Quốc Bảo
-                            </h4>
-                        </div>
-                        <div class="d-flex">
-                            <a class="ms-2 cusor" data-bs-toggle="modal" data-bs-target="#doimk">Đổi mật
-                                khẩu</a>
-                        </div>
-                        <div class="d-flex">
-                            <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <main class="content px-3 py-3">
-        <div class="container-fluid">
-            <div>
-                <div class="input-group d-flex align-items-center border border-dark rounded"
-                    style="width: 300px;padding: 0;">
-                    <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
-                    <input type="text" class="form-control input-border" placeholder="Thông tin phòng"
-                        aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <table class="table">
-                            <thead style="background: #0e2238;">
-                                <tr>
-                                    <th scope="col">STT</th>
-                                    <th scope="col">Mã hạng phòng</th>
-                                    <th scope="col">Tên Hạng Phòng</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Giá Phòng</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Trạng thái</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td class="me-2">HP01</td>
-                                    <td>Deluxe</td>
-                                    <td></td>
-                                    <td>200k/h</td>
-                                    <td></td>
-                                    <td class="text-secondary">Trống</td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#roomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td class="me-2">HP02</td>
-                                    <td>Superior</td>
-                                    <td></td>
-                                    <td>300k/h</td>
-                                    <td></td>
-                                    <td class="text-warning">Đã đặt</td>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#yellowRoomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td class="me-2">HP03</td>
-                                    <td>Standard</td>
-                                    <td></td>
-                                    <td>100k/h</td>
-                                    <td></td>
-                                    <td class="text-secondary">Trống</td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#roomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td class="me-2">HP04</td>
-                                    <td>Executive</td>
-                                    <td></td>
-                                    <td>500k/h</td>
-                                    <td></td>
-                                    <td class="text-success">Đang hoạt động</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#checkoutModal">Chọn
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td class="me-2">HP05</td>
-                                    <td>Presidential</td>
-                                    <td></td>
-                                    <td>1000k/h</td>
-                                    <td></td>
-                                    <td class="text-secondary">Trống</td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#roomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td class="me-2">HP06</td>
-                                    <td>Deluxe</td>
-                                    <td></td>
-                                    <td>200k/h</td>
-                                    <td></td>
-                                    <td class="text-warning">Đã đặt</td>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#yellowRoomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td class="me-2">HP07</td>
-                                    <td>Standard</td>
-                                    <td></td>
-                                    <td>100k/h</td>
-                                    <td></td>
-                                    <td class="text-secondary">Trống</td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#roomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td class="me-2">HP08</td>
-                                    <td>Superior</td>
-                                    <td></td>
-                                    <td>300k/h</td>
-                                    <td></td>
-                                    <td class="text-success">Đang hoạt động</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#checkoutModal">Chọn
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td class="me-2">HP09</td>
-                                    <td>Executive</td>
-                                    <td></td>
-                                    <td>500k/h</td>
-                                    <td></td>
-                                    <td class="text-secondary">Trống</td>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#roomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td class="me-2">HP10</td>
-                                    <td>Presidential</td>
-                                    <td></td>
-                                    <td>1000k/h</td>
-                                    <td></td>
-                                    <td class="text-warning">Đã đặt</td>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#yellowRoomModal">Nhận
-                                            phòng</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Tân</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- BootStrap icon -->
+    <link href="
+     https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- OWN carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Flatpick -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    
+</head>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="main" id="content">
+            <nav class="navbar navbar-expand px-4 py-3">
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                        <li>
+                            <h2 style="font-weight: bolder;">Danh sách phòng</h2>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="images/account.png" class="avatar img-fluid" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end rounded" style="width: 180px;">
+                                <div class="row">
+                                    <h4 style="font-weight: 600; font-size: larger;" class="ms-2">Huỳnh Quốc Bảo
+                                    </h4>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="ms-2 cusor" data-bs-toggle="modal" data-bs-target="#doimk">Đổi mật
+                                        khẩu</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="ms-2 cusor" style="color: red;">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-3">
+                <div class="container-fluid">
+                    <div>
+                        <div class="input-group d-flex align-items-center border border-dark rounded"
+                            style="width: 300px;padding: 0;">
+                            <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                            <input type="text" class="form-control input-border" placeholder="Thông tin phòng"
+                                aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <table class="table">
+                                    <thead style="background: #0e2238;">
+                                        <tr>
+                                            <th scope="col">STT</th>
+                                            <th scope="col">Mã hạng phòng</th>
+                                            <th scope="col">Tên Hạng Phòng</th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Giá Phòng</th>
+                                            <th scope="col"></th>
+                                            <th scope="col">Trạng thái</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td class="me-2">HP01</td>
+                                            <td>Deluxe</td>
+                                            <td></td>
+                                            <td>200k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td class="me-2">HP02</td>
+                                            <td>Superior</td>
+                                            <td></td>
+                                            <td>300k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td class="me-2">HP03</td>
+                                            <td>Standard</td>
+                                            <td></td>
+                                            <td>100k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td class="me-2">HP04</td>
+                                            <td>Executive</td>
+                                            <td></td>
+                                            <td>500k/h</td>
+                                            <td></td>
+                                            <td class="text-success">Đang hoạt động</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td class="me-2">HP05</td>
+                                            <td>Presidential</td>
+                                            <td></td>
+                                            <td>1000k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td class="me-2">HP06</td>
+                                            <td>Deluxe</td>
+                                            <td></td>
+                                            <td>200k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td class="me-2">HP07</td>
+                                            <td>Standard</td>
+                                            <td></td>
+                                            <td>100k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td class="me-2">HP08</td>
+                                            <td>Superior</td>
+                                            <td></td>
+                                            <td>300k/h</td>
+                                            <td></td>
+                                            <td class="text-success">Đang hoạt động</td>
+                                            <td>
+                                                <button type="button" class="btn btn-success btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td class="me-2">HP09</td>
+                                            <td>Executive</td>
+                                            <td></td>
+                                            <td>500k/h</td>
+                                            <td></td>
+                                            <td class="text-secondary">Trống</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td class="me-2">HP10</td>
+                                            <td>Presidential</td>
+                                            <td></td>
+                                            <td>1000k/h</td>
+                                            <td></td>
+                                            <td class="text-warning">Đã đặt</td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm"
+                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận phòng</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
      <!-- Modal doi mk -->
      <div class="modal fade" id="doimk" tabindex="-1" aria-labelledby="moimk" aria-hidden="true">
         <div class="modal-dialog">
@@ -248,281 +279,341 @@
         </div>
     </div>
 
-    <!-- Modal cho nút nhận phòng xám -->
-    <div class="modal fade" id="roomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="border-radius: 20px">
-                <div class="modal-header d-flex justify-content-center">
-                    <div>
-                        <h5 style="font-weight: bolder;">Thông tin phòng </h5>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Modal cho nút nhận phòng xám -->
+<div class="modal fade" id="roomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" id="roomModalDialog">
+        <div class="modal-content" style="border-radius: 20px" id="roomModalContent">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">Thông tin phòng</h5>
                 </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 px-0">
-                                <div class="container">
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Họ tên:</span></h6>
-                                            <input type="text" class="form-control" value="Nguyễn Văn Nhật">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
-                                            <input type="text" class="form-control" value="012345678">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Giới tính:</span></h6>
-                                            <select class="form-control">
-                                                <option value="Nam" selected>Nam</option>
-                                                <option value="Nữ">Nữ</option>
-                                            </select>
-                                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" id="TenTrong">
+                                        <span class="error text-danger" id="NameError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">CCCD:</span></h6>
-                                            <input type="text" class="form-control" value="091275632831">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control datepicker" value="25/09/2024">
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control datepicker" value="27/09/2024">
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" id="SdtTrong">
+                                        <span class="error text-danger" id="PhoneError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Email:</span></h6>
-                                            <input type="email" class="form-control" value="nhat029@gmail.com">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
-                                            <input type="text" class="form-control" value="2">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
-                                            <input type="text" class="form-control" value="VIP">
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                        <select class="form-select" id="GioiTingTrong" required="">
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                            <option value="Khác">Khác</option>
+                                        </select>
+                                        <span class="error text-danger" id="GenderError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
-                                            <input type="text" class="form-control" value="PL001">
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" id="CccdTRong" >
+                                        <span class="error text-danger" id="CccdError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" id="NgayNhanTrong" >
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                         </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
-                                            <input type="text" class="form-control" value="Sạch sẽ">
+                                        <span class="error text-danger" id="CheckInDateError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày trả:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" id="NgayTraTrong">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                         </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
-                                            <input type="text" class="form-control" value="900000 VND">
-                                        </div>
+                                        <span class="error text-danger" id="CheckOutDateError"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" id="EmailTrong" >
+                                        <span class="error text-danger" id="EmailError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" id="NgayTrong" >
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <select class="form-select" aria-label="Default select example" id="HPTrong">
+                                            <option selected="" value="">Chọn hạng phòng</option>
+                                            <option selected="">Dexu King</option>
+                                            <option value="1">Dexu King 1</option>
+                                            <option value="2">Dexu King 2</option>
+                                        </select>
+                                        <span class="error text-danger" id="RoomClassError"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <select class="form-select" aria-label="Default select example" id="TPTrong">
+                                            <option selected="" value="">Chọn tên phòng</option>
+                                            <option selected="">Dexu King</option>
+                                            <option value="1">Dexu King 1</option>
+                                            <option value="2">Dexu King 2</option>
+                                        </select>
+                                        <span class="error text-danger" id="RoomNameError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" id="YeuCauTrong" >
+                                        <span class="error text-danger" id="RequestError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
+                                        <input type="text" class="form-control" id="TtTrong" >
+                                        <span class="error text-danger" id="PaymentError"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Nhận phòng</button>
-                    <button type="button" class="btn btn-warning">Đặt phòng</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" id="PhongTrong" >Đặt phòng</button>
+
             </div>
         </div>
     </div>
-
-    <!-- Modal cho nút nhận phòng màu vàng -->
-    <div class="modal fade" id="yellowRoomModal" tabindex="-1" aria-labelledby="yellowRoomModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="border-radius: 20px">
-                <div class="modal-header d-flex justify-content-center">
-                    <div>
-                        <h5 style="font-weight: bolder;">Thông tin nhận phòng</h5>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+ <!-- Modal cho nút nhận phòng màu vàng -->
+ <div class="modal fade" id="yellowRoomModal" tabindex="-1" aria-labelledby="yellowRoomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" id="roomModalDialog">
+        <div class="modal-content" style="border-radius: 20px" id="roomModalContent">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">Thông tin phòng</h5>
                 </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 px-0">
-                                <div class="container">
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Họ tên:</span></h6>
-                                            <input type="text" class="form-control" value="Nguyễn Văn Nhật">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
-                                            <input type="text" class="form-control" value="012345678">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Giới tính:</span></h6>
-                                            <select class="form-control">
-                                                <option value="Nam" selected>Nam</option>
-                                                <option value="Nữ">Nữ</option>
-                                            </select>
-                                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" id="TenDatDat" value="Nguyễn Bảo Anh">
+                                        <span class="error text-danger" id="nameError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">CCCD:</span></h6>
-                                            <input type="text" class="form-control" value="091275632831">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control datepicker" value="25/09/2024">
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control datepicker" value="27/09/2024">
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" id="SdtDatDat" value="0865739181">
+                                        <span class="error text-danger" id="phoneError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Email:</span></h6>
-                                            <input type="email" class="form-control" value="nhat029@gmail.com">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
-                                            <input type="text" class="form-control" value="2">
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
-                                            <input type="text" class="form-control" value="VIP">
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                        <select class="form-select" id="gioiTinhDatDat" required="">
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                            <option value="Khác">Khác</option>
+                                        </select>
+                                        <span class="error text-danger" id="genderError"></span>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
-                                            <input type="text" class="form-control" value="PL001">
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" id="CccdDatDat" value="094204000731">
+                                        <span class="error text-danger" id="cccdError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" id="NgayNhanDaDat" value="25/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                         </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
-                                            <input type="text" class="form-control" value="Sạch sẽ">
+                                        <span class="error text-danger" id="checkInDateError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày trả:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" id="NgayTraDaDat" value="27/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                         </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
-                                            <input type="text" class="form-control" value="900000 VND">
-                                        </div>
+                                        <span class="error text-danger" id="checkOutDateError"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" id="EmailDatDat" value="dadsda@gmail.com">
+                                        <span class="error text-danger" id="emailError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" id="NgayDatDat" value="2">
+                                        
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <select class="form-select" aria-label="Default select example" id="HPDaDat">
+                                            <option selected="" value="">Chọn hạng phòng</option>
+                                            <option selected="">Dexu King</option>
+                                            <option value="1">Dexu King 1</option>
+                                            <option value="2">Dexu King 2</option>
+                                        </select>
+                                        <span class="error text-danger" id="roomClassError"></span>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <select class="form-select" aria-label="Default select example" id="TPDatDat">
+                                            <option selected="" value="">Chọn tên phòng</option>
+                                            <option selected="">Dexu King</option>
+                                            <option value="1">Dexu King 1</option>
+                                            <option value="2">Dexu King 2</option>
+                                        </select>
+                                        <span class="error text-danger" id="roomNameError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" id="YeuCauDaDat" value="Sạch sẽ">
+                                        <span class="error text-danger" id="requestError"></span>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
+                                        <input type="text" class="form-control" id="TtDaDat" value="900000 VND">
+                                        <span class="error text-danger" id="paymentError"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning">Nhận phòng</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="NhanPhong">Nhận phòng</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal cho nút chọn phòng -->
-    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="border-radius: 20px">
-                <div class="modal-header d-flex justify-content-center">
-                    <div>
-                        <h5 style="font-weight: bolder;">TRả phòng</h5>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Modal cho nút chọn phòng -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 20px">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">Trả phòng</h5>
                 </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 px-0">
-                                <div class="container">
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Họ tên:</span></h6>
-                                            <input type="text" class="form-control" value="Nguyễn Văn Nhật" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
-                                            <input type="text" class="form-control" value="012345678" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Giới tính:</span></h6>
-                                            <select class="form-control" disabled>
-                                                <option value="Nam" selected>Nam</option>
-                                                <option value="Nữ">Nữ</option>
-                                            </select>
-                                        </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" value="Nguyễn Văn Nhật" disabled>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">CCCD:</span></h6>
-                                            <input type="text" class="form-control" value="091275632831" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control datepicker" value="25/09/2024">
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
-                                            <input type="text" class="form-control" value="27/09/2024" disabled>
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" value="012345678" disabled> 
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Email:</span></h6>
-                                            <input type="email" class="form-control" value="nhat029@gmail.com" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
-                                            <input type="text" class="form-control" value="2" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
-                                            <input type="text" class="form-control" value="VIP" disabled>
-                                        </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                       <input type="text" class="form-control" value="Nam" disabled>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
-                                            <input type="text" class="form-control" value="PL001" disabled>
-                                        </div>
-                                        <div class="col-4">
-                                            <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
-                                            <input type="text" class="form-control" value="Sạch sẽ" disabled>
-                                        </div>
-                                        <div class="col- 4">
-                                            <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
-                                            <input type="text" class="form-control" value="900000 VND" disabled>
-                                        </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" value="091275632831" disabled>
                                     </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <input type="text" class="form-control" id="checkInDate" value="27/09/2024" disabled>                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày trả:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" id="checkOutDate" value="29/09/2024">                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>           
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" value="nhat029@gmail.com" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" value="2" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <input type="text" class="form-control" value="VIP" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <input type="text" class="form-control" value="PL001" disabled>
+                                    </div>  
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" id="YeuCauDaDat" value="Sạch sẽ" disabled>
+                                       
+                                    </div>
+                                    
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Thanh Toán</span></h6>
+                                        <input type="text" class="form-control" value="9000000" disabled> 
+                                    </div>                               
+                               
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Trả phòng và Thanh Toán</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Trả phòng và Thanh Toán</button>
             </div>
         </div>
     </div>
+</div>
 
+   <!-- Boottrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+        integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- js file -->
+    <script src="js/letan.js"></script>
+    <!-- Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- own Caroul js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Flatpick -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
      <!-- javascrit bắt lỗi đổi mk -->
      <script>
         // Loại bỏ khoảng trắng trong khi người dùng nhập vào các ô mật khẩu
@@ -586,4 +677,233 @@
         });
 
     </script>
-</div>
+    <script>
+         flatpickr(".datepicker", {
+         dateFormat: "d/m/yy",
+         });
+    </script>
+    <!-- bẮT LỖI ĐẶT PHÒNG -->
+       <script>
+        document.getElementById("PhongTrong").addEventListener("click", function() {
+            let isValid = true;
+        
+            // Lấy giá trị từ các input fieldsd
+            const name = document.getElementById("TenTrong").value.trim();
+            const phone = document.getElementById("SdtTrong").value.trim();
+            const gender = document.getElementById("GioiTingTrong").value;
+            const cccd = document.getElementById("CccdTRong").value.trim();
+            const checkInDate = document.getElementById("NgayNhanTrong").value.trim();
+            const checkOutDate = document.getElementById("NgayTraTrong").value.trim();
+            const email = document.getElementById("EmailTrong").value.trim();
+            const roomClass = document.getElementById("HPTrong").value;
+            const roomName = document.getElementById("TPTrong").value;
+            const request = document.getElementById("YeuCauTrong").value.trim();
+            const payment = document.getElementById("TtTrong").value.trim();
+        
+            // Reset lỗi
+            document.getElementById("NameError").textContent = "";
+            document.getElementById("PhoneError").textContent = "";
+            document.getElementById("GenderError").textContent = "";
+            document.getElementById("CccdError").textContent = "";
+            document.getElementById("CheckInDateError").textContent = "";
+            document.getElementById("CheckOutDateError").textContent = "";
+            document.getElementById("EmailError").textContent = "";
+            document.getElementById("RoomClassError").textContent = "";
+            document.getElementById("RoomNameError").textContent = "";
+            document.getElementById("RequestError").textContent = "";
+            document.getElementById("PaymentError").textContent = "";
+        
+            // Kiểm tra tên
+            if (name === "") {
+                document.getElementById("NameError").textContent = "Vui lòng nhập họ tên";
+                isValid = false;
+            }
+        
+            // Kiểm tra số điện thoại
+            if (phone === "" || !/^\d{10,11}$/.test(phone)) {
+                document.getElementById("PhoneError").textContent = "Vui lòng nhập số điện thoại hợp lệ";
+                isValid = false;
+            }
+        
+            // Kiểm tra giới tính
+            if (gender === "") {
+                document.getElementById("GenderError").textContent = "Vui lòng chọn giới tính";
+                isValid = false;
+            }
+        
+            // Kiểm tra CCCD
+            if (cccd === "" || !/^\d{9,12}$/.test(cccd)) {
+                document.getElementById("CccdError").textContent = "Vui lòng nhập CCCD hợp lệ";
+                isValid = false;
+            }
+        
+            // Kiểm tra ngày nhận và ngày trả
+            if (checkInDate === "") {
+                document.getElementById("CheckInDateError").textContent = "Vui lòng chọn ngày nhận";
+                isValid = false;
+            }
+            if (checkOutDate === "") {
+                document.getElementById("CheckOutDateError").textContent = "Vui lòng chọn ngày trả";
+                isValid = false;
+            }
+        
+            // Kiểm tra email
+            if (email === "" || !/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById("EmailError").textContent = "Vui lòng nhập email hợp lệ";
+                isValid = false;
+            }
+        
+            // Kiểm tra hạng phòng
+            if (roomClass === "") {
+                document.getElementById("RoomClassError").textContent = "Vui lòng chọn hạng phòng";
+                isValid = false;
+            }
+        
+            // Kiểm tra tên phòng
+            if (roomName === "") {
+                document.getElementById("RoomNameError").textContent = "Vui lòng chọn tên phòng";
+                isValid = false;
+            }
+        
+            // Kiểm tra yêu cầu
+            if (request === "") {
+                document.getElementById("RequestError").textContent = "Vui lòng nhập yêu cầu";
+                isValid = false;
+            }
+        
+            // Kiểm tra thanh toán
+            if (payment === "") {
+                document.getElementById("PaymentError").textContent = "Vui lòng nhập số tiền thanh toán";
+                isValid = false;
+            }
+        
+            // Nếu có lỗi, không cho phép submit
+            if (!isValid) {
+                return;
+            }
+        
+            // Xử lý khi tất cả đều hợp lệ
+            alert("Đặt phòng thành công!");
+        });
+    </script>
+    <!-- Bắt lỗi NHận Phòng -->
+    <script>
+       document.getElementById("NhanPhong").addEventListener("click", function() {
+    let isValid = true;
+
+    // Lấy giá trị từ các input fields
+    const name = document.getElementById("TenDatDat").value.trim();
+    const phone = document.getElementById("SdtDatDat").value.trim();
+    const gender = document.getElementById("gioiTinhDatDat").value;
+    const cccd = document.getElementById("CccdDatDat").value.trim();
+    const checkInDate = document.getElementById("NgayNhanDaDat").value.trim();
+    const checkOutDate = document.getElementById("NgayTraDaDat").value.trim();
+    const email = document.getElementById("EmailDatDat").value.trim();
+    const roomClass = document.getElementById("HPDaDat").value;
+    const roomName = document.getElementById("TPDatDat").value;
+    const request = document.getElementById("YeuCauDaDat").value.trim();
+    const payment = document.getElementById("TtDaDat").value.trim();
+
+    // Reset lỗi
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("genderError").textContent = "";
+    document.getElementById("cccdError").textContent = "";
+    document.getElementById("checkInDateError").textContent = "";
+    document.getElementById("checkOutDateError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("roomClassError").textContent = "";
+    document.getElementById("roomNameError").textContent = "";
+    document.getElementById("requestError").textContent = "";
+    document.getElementById("paymentError").textContent = "";
+
+    // Kiểm tra tên
+    if (name === "") {
+        document.getElementById("nameError").textContent = "Vui lòng nhập họ tên";
+        isValid = false;
+    }
+
+    // Kiểm tra số điện thoại
+    if (phone === "" || !/^\d{10,11}$/.test(phone)) {
+        document.getElementById("phoneError").textContent = "Vui lòng nhập số điện thoại hợp lệ";
+        isValid = false;
+    }
+
+    // Kiểm tra giới tính
+    if (gender === "") {
+        document.getElementById("genderError").textContent = "Vui lòng chọn giới tính";
+        isValid = false;
+    }
+
+    // Kiểm tra CCCD
+    if (cccd === "" || !/^\d{9,12}$/.test(cccd)) {
+        document.getElementById("cccdError").textContent = "Vui lòng nhập CCCD hợp lệ";
+        isValid = false;
+    }
+
+    // Kiểm tra ngày nhận và ngày trả
+    if (checkInDate === "") {
+        document.getElementById("checkInDateError").textContent = "Vui lòng chọn ngày nhận";
+        isValid = false;
+    }
+    if (checkOutDate === "") {
+        document.getElementById("checkOutDateError").textContent = "Vui lòng chọn ngày trả";
+        isValid = false;
+    }
+
+    // Kiểm tra email
+    if (email === "" || !/\S+@\S+\.\S+/.test(email)) {
+        document.getElementById("emailError").textContent = "Vui lòng nhập email hợp lệ";
+        isValid = false;
+    }
+
+    // Kiểm tra hạng phòng
+    if (roomClass === "") {
+        document.getElementById("roomClassError").textContent = "Vui lòng chọn hạng phòng";
+        isValid = false;
+    }
+
+    // Kiểm tra tên phòng
+    if (roomName === "") {
+        document.getElementById("roomNameError").textContent = "Vui lòng chọn tên phòng";
+        isValid = false;
+    }
+
+    // Kiểm tra yêu cầu
+    if (request === "") {
+        document.getElementById("requestError").textContent = "Vui lòng nhập yêu cầu";
+        isValid = false;
+    }
+
+    // Kiểm tra thanh toán
+    if (payment === "") {
+        document.getElementById("paymentError").textContent = "Vui lòng nhập số tiền thanh toán";
+        isValid = false;
+    }
+
+    // Nếu có lỗi, không cho phép submit
+    if (!isValid) {
+        return;
+    }
+
+    // Xử lý khi tất cả đều hợp lệ
+    alert("Nhận phòng thành công!");
+});
+
+    </script>
+
+    
+    
+    
+    
+   
+    
+    
+    
+
+   
+    
+  
+</body>
+
+</html>
