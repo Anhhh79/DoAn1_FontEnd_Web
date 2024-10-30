@@ -124,9 +124,8 @@
                                             <td></td>
                                             <td class="text-secondary">Trống</td>
                                             <td>
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#roomModal">Chọn phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -138,9 +137,8 @@
                                             <td></td>
                                             <td class="text-warning">Đã đặt</td>
                                             <td>
-                                                <button type="button" class="btn btn-warning btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#yellowRoomModal">Nhận phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -152,9 +150,8 @@
                                             <td></td>
                                             <td class="text-secondary">Trống</td>
                                             <td>
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#roomModal">Chọn phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -166,9 +163,8 @@
                                             <td></td>
                                             <td class="text-success">Đang hoạt động</td>
                                             <td>
-                                                <button type="button" class="btn btn-success btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-success btn-sm" style=" padding-left: 16px;padding-right: 16px;" data-bs-toggle="modal"
+                                                    data-bs-target="#checkoutModal">Trả phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -180,9 +176,8 @@
                                             <td></td>
                                             <td class="text-secondary">Trống</td>
                                             <td>
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#roomModal">Chọn phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -194,9 +189,8 @@
                                             <td></td>
                                             <td class="text-warning">Đã đặt</td>
                                             <td>
-                                                <button type="button" class="btn btn-warning btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#yellowRoomModal">Nhận phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -208,9 +202,8 @@
                                             <td></td>
                                             <td class="text-secondary">Trống</td>
                                             <td>
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#roomModal">Chọn phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -222,9 +215,8 @@
                                             <td></td>
                                             <td class="text-success">Đang hoạt động</td>
                                             <td>
-                                                <button type="button" class="btn btn-success btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#checkoutModal">Chọn
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-success btn-sm" style=" padding-left: 16px;padding-right: 16px;" data-bs-toggle="modal"
+                                                    data-bs-target="#checkoutModal">Trả  phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -236,9 +228,8 @@
                                             <td></td>
                                             <td class="text-secondary">Trống</td>
                                             <td>
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#roomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#roomModal">Chọn phòng</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -250,9 +241,8 @@
                                             <td></td>
                                             <td class="text-warning">Đã đặt</td>
                                             <td>
-                                                <button type="button" class="btn btn-warning btn-sm"
-                                                    data-bs-toggle="modal" data-bs-target="#yellowRoomModal">Nhận
-                                                    phòng</button>
+                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#yellowRoomModal">Nhận phòng</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -376,6 +366,12 @@
                 });
 
             </script>
+    
+            <script>
+                flatpickr(".datepicker", {
+                    dateFormat: "d/m/yy",
+                });
+            </script>
         </div>
     </div>
 
@@ -385,6 +381,7 @@
         crossorigin="anonymous"></script>
     <!-- file javascript -->
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
    
 </body>
 
